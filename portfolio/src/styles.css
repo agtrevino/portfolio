@@ -6,20 +6,58 @@
     src: url('../src/assets/fonts/Dense-Regular.otf');
   }
 
+  @font-face {
+    font-family: 'big';
+    src: url('../src/assets/fonts/BIGJOHN.otf');
+  }
+
+  @font-face {
+    font-family: 'slim';
+    src: url('../src/assets/fonts/SlimJoe.otf');
+  }
+
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body { 
+  margin: 0; 
+  font-family: 'slim', Roboto, "Helvetica Neue", sans-serif;
+  color: #FEFEFE;
+  font-weight: bold;
+ }
 
 
 .main-container {
-    padding: 40px;
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, .8)  , rgba(0, 0, 0, .6)), url("../src/assets/img/background/san-antonio-hd-desktop-wallpaper-2.png");
+    background-image: linear-gradient(to right, rgba(0, 0, 0, .2)  , rgba(0, 0, 0, .9)), url("../src/assets/img/background/web-design-2906159_1920.jpg");
     background-size: cover;
     min-height: 100vh !important;
   }
 
-  .name-title h1 {
-      font-family: 'dense';
-      font-weight: 600 !important;
-      letter-spacing: 6px;
-      color: #C3272B;
-  }
+.name-title h1 {
+  float: right;
+  font-family: 'big';
+  /* font-weight: 600 !important; */
+  letter-spacing: 6px;
+  color: #FEFEFE;
+}
+
+.intro-paragraph {
+  font-size: 23px;
+  margin-top: 125px;
+  margin-left: 20%;
+  margin-right: 20%;
+  color: #FEFEFE;
+  font-family: 'slim';
+  font-weight: 600;
+  text-align: right;
+}
+
+.intro-word-highlight {
+  font-size: 27px;
+  letter-spacing: 5px;
+  font-family: 'big';
+  color: #d1213d;
+}
+
+.navbar {
+  background: transparent !important;
+  
+}
