@@ -81,7 +81,7 @@ body {
   color: #d1213d;
 }
 
-.navbar {
+#navbar {
   width: 100%;
   position: fixed;
   background: transparent !important;
