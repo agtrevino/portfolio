@@ -26,9 +26,14 @@ body {
 
 
 .main-container {
-    background-image: linear-gradient(to right, rgba(0, 0, 0, .2)  , rgba(0, 0, 0, .9)), url("../src/assets/img/background/web-design-2906159_1920.jpg");
-    background-size: cover;
-    min-height: 100vh !important;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, .2)  , rgba(0, 0, 0, .9)), url("../src/assets/img/background/pen-4337524_1920.jpg");
+  background-size: cover;
+  min-height: 100vh !important;
+
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   }
 
 .name-title h1 {
@@ -54,10 +59,36 @@ body {
   font-size: 27px;
   letter-spacing: 5px;
   font-family: 'big';
-  color: #d1213d;
+  color: #00a8ff;
 }
 
 .navbar {
   background: transparent !important;
-  
+}
+
+.navbar-nav {
+  float:none;
+  margin:0 auto;
+  display: block;
+  text-align: center;
+}
+
+.navbar-nav > li {
+  color: #FEFEFE !important;
+  display: inline-block;
+  float:none;
+}
+
+.nav-link {
+  color: rgba(254, 254, 254, .7) !important;
+  letter-spacing: 3px;
+  padding-bottom: 15px;
+  border-left: 3px solid transparent;
+  transition: 400ms ease;
+}
+
+.nav-link:hover {
+  color: #fefefe !important;
+  border-left: 3px solid #d1213d;
+  transition: 400ms ease;
 }
