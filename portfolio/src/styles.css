@@ -16,7 +16,19 @@
     src: url('../src/assets/fonts/SlimJoe.otf');
   }
 
+  @font-face {
+    font-family: 'avenir';
+    src: url('../src/assets/fonts/AvenirLTStd-Medium.woff');
+  }
+
+  @font-face {
+    font-family: 'avenirLight';
+    src: url('../src/assets/fonts/AvenirLTStd-Light.woff');
+  }
+
+
 html, body { height: 100%; }
+
 body { 
   margin: 0; 
   font-family: 'slim', Roboto, "Helvetica Neue", sans-serif;
@@ -34,22 +46,25 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  }
+}
 
-  .name-title {
-    border-right: 3px solid #d1213d;
-  }
+.main {
+ padding: 90px 40px;
+}
+
+.name-title {
+  border-right: 3px solid #d1213d;
+}
 
 .name-title h1 {
   float: right;
   font-family: 'big';
-  /* font-weight: 600 !important; */
   letter-spacing: 6px;
   color: #FEFEFE;
 }
 
 .intro-paragraph {
-  font-size: 23px;
+  font-size: 25px;
   margin-top: 125px;
   margin-left: 20%;
   margin-right: 20%;
@@ -60,13 +75,15 @@ body {
 }
 
 .intro-word-highlight {
-  font-size: 27px;
+  font-size: 30px;
   letter-spacing: 5px;
   font-family: 'big';
   color: #d1213d;
 }
 
 .navbar {
+  width: 100%;
+  position: fixed;
   background: transparent !important;
 }
 
@@ -95,4 +112,8 @@ body {
   color: #fefefe !important;
   border-bottom: 3px solid #d1213d;
   transition: 400ms ease;
+}
+
+.nav-item {
+  margin: 0 5px;
 }
