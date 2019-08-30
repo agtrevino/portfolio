@@ -98,6 +98,7 @@ body {
 }
 
 .navbar {
+  z-index: 9999999;
   width: 100%;
   position: fixed;
   padding-bottom: 0px;
@@ -137,7 +138,12 @@ body {
 
 /* ----------------------------------- */
 
-.totop {
-  left:-600px;
+.slide-right {
+  left:-700px;
 
-  }
+}
+
+.art-text-fade-in {
+  /* opacity: 1; */
+  
+}
