@@ -136,6 +136,11 @@ body {
   margin: 0 15px;
 }
 
+.spacer-row {
+  height: 50px;
+  width: 100%;
+}
+
 /* ----------------------------------- */
 
 .slide-right {

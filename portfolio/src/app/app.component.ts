@@ -19,7 +19,7 @@ $(window).scroll(function () {
     $('.nav-item').css('margin', ' 0px 15px');
     $('.nav-item').css('transition', '400ms');
   } else {
-    $('.navbar').css('background', 'rgba(0, 0, 0, 0.3)');
+    $('.navbar').css('background', 'rgba(0, 0, 0, 0.5)');
     $('.navbar').css('transition', '400ms');
     $('.navbar').css('height', '60px');
     $('.nav-item').css('margin', ' 0px 30px');
