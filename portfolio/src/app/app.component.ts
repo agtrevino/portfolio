@@ -28,10 +28,10 @@ $(window).scroll(function () {
   $(window).scroll(function () {
     if (scroll < 600) {
       $('.art-text-fade-in').css('opacity', '0');
-      $('.art-text-fade-in').css('transition', '600ms');
+      $('.art-text-fade-in').css('transition', '1200ms');
     } else {
       $('.art-text-fade-in').css('opacity', '1');
-      $('.art-text-fade-in').css('transition', '600ms');
+      $('.art-text-fade-in').css('transition', '1200ms');
     }
 
   });
