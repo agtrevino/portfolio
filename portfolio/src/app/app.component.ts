@@ -25,4 +25,17 @@ $(window).scroll(function(){
       $('.nav-item').css('margin', ' 0px 30px');
       $('.nav-item').css('transition', '400ms');
   }
+
+  if(scroll < 100){
+
+  }
+
 });
+
+$(window).scroll(function() {
+  if ($(this).scrollTop() > 120) {
+    $('.slide-right').stop().animate({ left: '0px' });
+  } else {
+    $('.slide-right').stop().animate({ left: '-400px' });
+  }
+  });

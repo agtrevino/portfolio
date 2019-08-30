@@ -27,7 +27,12 @@
   }
 
 
-html, body { height: 100%; }
+html, body { 
+  scroll-behavior: smooth;
+  height: 100%; 
+}
+
+
 
 body { 
   margin: 0; 
@@ -63,6 +68,17 @@ body {
   color: #FEFEFE;
 }
 
+.project-title {
+  border-left: 3px solid #d1213d;
+}
+
+.project-title h1 {
+  float: left;
+  font-family: 'big';
+  letter-spacing: 6px;
+  color: #FEFEFE;
+}
+
 .intro-paragraph {
   font-size: 25px;
   margin-top: 125px;
@@ -84,6 +100,7 @@ body {
 .navbar {
   width: 100%;
   position: fixed;
+  padding-bottom: 0px;
   /* background: transparent !important; */
 }
 
@@ -118,7 +135,9 @@ body {
   margin: 0 15px;
 }
 
-.scrolled {
-  /* background: red !important; */
-  transition: 400ms ease;
-}
+/* ----------------------------------- */
+
+.totop {
+  left:-600px;
+
+  }
