@@ -81,10 +81,10 @@ body {
   color: #d1213d;
 }
 
-#navbar {
+.navbar {
   width: 100%;
   position: fixed;
-  background: transparent !important;
+  /* background: transparent !important; */
 }
 
 .navbar-nav {
@@ -115,5 +115,10 @@ body {
 }
 
 .nav-item {
-  margin: 0 5px;
+  margin: 0 15px;
+}
+
+.scrolled {
+  /* background: red !important; */
+  transition: 400ms ease;
 }
