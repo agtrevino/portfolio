@@ -40,7 +40,7 @@ $(window).scroll(function () {
 
   });
   $(window).scroll(function () {
-    if (scroll < 900) {
+    if (scroll < 800) {
       $('.jstorm-logo-fade-in').css('opacity', '0');
       $('.jstorm-logo-fade-in').css('transition', '600ms');
     } else {
