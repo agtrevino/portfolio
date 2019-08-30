@@ -17,13 +17,18 @@
   }
 
   @font-face {
-    font-family: 'avenir';
-    src: url('../src/assets/fonts/AvenirLTStd-Medium.woff');
+    font-family: 'avenirRegular';
+    src: url('../src/assets/fonts/AvenirLTStd-Book.woff');
   }
 
   @font-face {
     font-family: 'avenirLight';
-    src: url('../src/assets/fonts/AvenirLTStd-Light.woff');
+    src: url('../src/assets/fonts/AvenirLTStd-LightCopy.woff');
+  }
+
+  @font-face {
+    font-family: 'avenirSemiBold';
+    src: url('../src/assets/fonts/OpenSans-Semibold.ttf');
   }
 
 
@@ -32,7 +37,25 @@ html, body {
   height: 100%; 
 }
 
+.vertical-text {
+  opacity: 0;
+  position: fixed;
+  top: 45%;
+  font-size: 13px;
+  left: 10px;
+  letter-spacing: 3px;
+  transform: rotate(180deg);
+  writing-mode: vertical-lr;
+  font-weight: 900;
+  transition: 400ms;
+ }
 
+ .vertical-text:hover {
+  color: #eb3b5a;
+}
+ .vertical-text span {
+   text-orientation: sideways;
+ }
 
 body { 
   margin: 0; 
@@ -58,7 +81,7 @@ body {
 }
 
 .name-title {
-  border-right: 3px solid #d1213d;
+  border-right: 3px solid #eb3b5a;
 }
 
 .name-title h1 {
@@ -69,7 +92,7 @@ body {
 }
 
 .project-title {
-  border-left: 3px solid #d1213d;
+  border-left: 3px solid #eb3b5a;
 }
 
 .project-title h1 {
@@ -94,7 +117,7 @@ body {
   font-size: 30px;
   letter-spacing: 5px;
   font-family: 'big';
-  color: #d1213d;
+  color: #eb3b5a;
 }
 
 .navbar {
@@ -128,7 +151,7 @@ body {
 
 .nav-link:hover {
   color: #fefefe !important;
-  border-bottom: 3px solid #d1213d;
+  border-bottom: 3px solid #eb3b5a;
   transition: 400ms ease;
 }
 
@@ -144,7 +167,7 @@ body {
 /* ----------------------------------- */
 
 .slide-right {
-  left:-700px;
+  left:-800px;
 
 }
 
