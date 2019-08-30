@@ -164,6 +164,31 @@ body {
   width: 100%;
 }
 
+
+/* ----------------------------------- */
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, .2); 
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0.7); 
+  transition: 400ms ease;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #000; 
+  transition: 400ms ease;
+}
+
 /* ----------------------------------- */
 
 .slide-right {
