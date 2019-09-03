@@ -102,6 +102,28 @@ body {
   color: #FEFEFE;
 }
 
+.project-text {
+  font-family: 'avenirLight'; 
+  color: #fefefe; 
+  text-align: right; 
+  font-size: 30px; 
+  border-bottom: 3px solid #eb3b5a; 
+  width: 600px; 
+  float: right; 
+  padding-bottom: 8px;
+}
+
+.project-text-right {
+  font-family: 'avenirLight'; 
+  color: #fefefe; 
+  text-align: left; 
+  font-size: 30px; 
+  border-bottom: 3px solid #eb3b5a; 
+  width: 600px; 
+  float: left; 
+  padding-bottom: 8px;
+}
+
 .intro-paragraph {
   font-size: 25px;
   margin-top: 125px;
@@ -216,17 +238,19 @@ body {
 }
 
 .fade-in.one {
-  -webkit-animation-delay: 0.35s;
+  /* -webkit-animation-delay: 0.35s;
   -moz-animation-delay: 0.35s;
-  animation-delay: 0.35s;
-
+  animation-delay: 0.35s; */
+  -webkit-animation-delay: 1.3s;
+  -moz-animation-delay:1.3s;
+  animation-delay: 1.3s;
 }
 
 .fade-in.two {
-  -webkit-animation-delay: 1s;
-  -moz-animation-delay:1s;
-  animation-delay: 1s;
-  transform: translateY(-30px);
+  -webkit-animation-delay: 2s;
+  -moz-animation-delay:2s;
+  animation-delay: 2s;
+  /* transform: translateY(-30px); */
 }
 
 .fade-in.three {
