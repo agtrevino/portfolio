@@ -67,7 +67,7 @@ body {
 
 
 .main-container {
-  background-image: linear-gradient(to right, rgba(0, 0, 0, .2)  , rgba(0, 0, 0, .9)), url("../src/assets/img/background/black-791429_1920.jpg");
+  background-image: linear-gradient(to right, rgba(0, 0, 0, .2)  , rgba(0, 0, 0, .9)), url("../src/assets/img/background/laptop-img.jpg");
   min-height: 100vh !important;
 
   background-attachment: fixed;
@@ -230,33 +230,36 @@ body {
 }
 
 .col-4:hover .email-img {
-  background-image: linear-gradient(to right, rgba(0, 0, 0, .2)  , rgba(32, 32, 32, .6)), url("../src/assets/img/background/delivery-envelopes-letters-1919343.jpg");
+  background-image: linear-gradient(to right, rgba(0, 0, 0, .3)  , rgba(32, 32, 32, .8)), url("../src/assets/img/background/mail-img.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   height: 100%; 
   opacity: 1;
   transition: 400ms ease;
+  text-decoration: none;
 }
 
 .col-4:hover  .phone-img{
-  background-image: linear-gradient(to right, rgba(0, 0, 0, .2)  , rgba(32, 32, 32, .6)), url("../src/assets/img/background/access-adult-blur-261628.jpg");
+  background-image: linear-gradient(to right, rgba(0, 0, 0, .3)  , rgba(32, 32, 32, .8)), url("../src/assets/img/background/phone-img.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   height: 100%; 
   opacity: 1;
   transition: 400ms ease;
+  text-decoration: none;
 }
 
 .col-4:hover  .linkedin-img{
-  background-image: linear-gradient(to right, rgba(0, 0, 0, .2)  , rgba(32, 32, 32, .6)), url("../src/assets/img/background/pexels-photo-1282173.jpeg");
+  background-image: linear-gradient(to right, rgba(0, 0, 0, .3)  , rgba(32, 32, 32, .8)), url("../src/assets/img/background/handshake-img.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   height: 100%; 
   opacity: 1;
   transition: 400ms ease;
+  text-decoration: none;
 }
 
 
