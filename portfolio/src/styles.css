@@ -65,6 +65,27 @@ body {
   font-weight: bold;
  }
 
+ /* ================================= */
+
+ .fullscreen-bg {
+  position: relative;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  z-index: -100;
+}
+
+.fullscreen-bg__video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: fit-content;
+}
+
+/* ================================ */
+
 
 .main-container {
   background-image: linear-gradient(to right, rgba(0, 0, 0, .2)  , rgba(0, 0, 0, .9)), url("../src/assets/img/background/laptop-img.jpg");
