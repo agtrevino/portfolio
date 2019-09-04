@@ -69,7 +69,7 @@ $(window).scroll(function () {
 
 $(window).scroll(function () {
   if ($(this).scrollTop() > 160) {
-    $('.slide-up').css('top', '-90px');
+    $('.slide-up').css('top', '0px');
     $('.slide-up').css('opacity', '1');
     $('.slide-up').css('transition', '600ms');
   } else {
