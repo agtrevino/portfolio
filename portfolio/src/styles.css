@@ -35,6 +35,7 @@
 html, body { 
   scroll-behavior: smooth;
   height: 100%; 
+  transition: 400ms ease;
 }
 
 .vertical-text {
@@ -67,7 +68,6 @@ body {
 
 .main-container {
   background-image: linear-gradient(to right, rgba(0, 0, 0, .2)  , rgba(0, 0, 0, .9)), url("../src/assets/img/background/black-791429_1920.jpg");
-  background-size: cover;
   min-height: 100vh !important;
 
   background-attachment: fixed;
@@ -173,7 +173,7 @@ body {
 
 .nav-link:hover {
   color: #fefefe !important;
-  border-bottom: 3px solid #eb3b5a;
+  border-bottom: 3px solid rgb(235, 59, 90);
   transition: 400ms ease;
 }
 
@@ -189,6 +189,74 @@ body {
 .proficiencies-img {
   width: 60%;
   margin-bottom: 15px;
+}
+
+.contact-btn {
+  background: transparent;
+  border: 3px solid #fefefe;
+  border-radius: 100px;
+  height: 100px;
+  width: 100px;
+  color: #fefefe;
+  font-weight: 900;
+  transition: 400ms ease;
+}
+
+.contact-btn:hover {
+  background: #fefefe;
+  border: 3px solid transparent;
+  border-radius: 100px;
+  height: 100px;
+  width: 100px;
+  color: #000;
+  
+  transition: 400ms ease;
+}
+
+.email-img .phone-img .linkedin-img {
+  height: 100%;
+  opacity: 0.2;
+  transition: 400ms ease;
+}
+
+.contact-title{
+  height: 100%;
+  opacity: 1 !important;
+  color: #FEFEFE;
+  font-family: 'slim';
+  font-weight: 900;
+  text-decoration-color: transparent;
+  transition: 400ms ease;
+}
+
+.col-4:hover .email-img {
+  background-image: linear-gradient(to right, rgba(0, 0, 0, .2)  , rgba(32, 32, 32, .6)), url("../src/assets/img/background/delivery-envelopes-letters-1919343.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%; 
+  opacity: 1;
+  transition: 400ms ease;
+}
+
+.col-4:hover  .phone-img{
+  background-image: linear-gradient(to right, rgba(0, 0, 0, .2)  , rgba(32, 32, 32, .6)), url("../src/assets/img/background/access-adult-blur-261628.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%; 
+  opacity: 1;
+  transition: 400ms ease;
+}
+
+.col-4:hover  .linkedin-img{
+  background-image: linear-gradient(to right, rgba(0, 0, 0, .2)  , rgba(32, 32, 32, .6)), url("../src/assets/img/background/pexels-photo-1282173.jpeg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%; 
+  opacity: 1;
+  transition: 400ms ease;
 }
 
 
