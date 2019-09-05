@@ -129,7 +129,7 @@ body {
   text-align: right; 
   font-size: 30px; 
   border-bottom: 3px solid #eb3b5a; 
-  width: 600px; 
+  max-width: 95%; 
   float: right; 
   padding-bottom: 8px;
 }
@@ -140,7 +140,7 @@ body {
   text-align: left; 
   font-size: 30px; 
   border-bottom: 3px solid #eb3b5a; 
-  width: 600px; 
+  max-width: 95%; 
   float: left; 
   padding-bottom: 8px;
 }
