@@ -53,8 +53,8 @@
     <div class="row" style="width: 100%">
       <div class="col-md-6" style="height: 500px;">
         <div class="video slide-right" style="position: absolute; top: 60px; width: 95%;">
-          <video class=" slide-right" loop preload="none" style="width: 95%;" poster="../assets/videos/artgallery.PNG"
-            controls>
+          <video class="slide-right" onloadedmetadata="this.muted=true" loop preload="none" style="width: 95%;"
+            poster="../assets/videos/artgallery.PNG" controls>
             <source src="../assets/videos/2019-08-28 15-58-10.mp4" type="video/mp4">
             <source src="movie.ogg" type="video/ogg">
             Your browser does not support the video tag.
@@ -73,7 +73,7 @@
 
     </div>
     <div class="row" style="width: 100%; height: 500px;">
-      <div class="col-md-6 jstorm-logo-fade-in" >
+      <div class="col-md-6 jstorm-logo-fade-in">
         <h2 style="font-family: 'avenirSemiBold'; color: #eb3b5a; text-align: right;">J.Storm Logo Design</h2>
         <p class="project-text">
           Logo created for Jeremy Lin's professional <br>Esports organization, J.Storm.
@@ -83,8 +83,9 @@
         <div class="slide-up">
           <!-- <img class="slide-up" style="width: 50%; position: absolute; left: 10px;"
             src="../assets/img/jstorm-logo/j.storm-logo-wht.png"> -->
-          <video class=" slide-up" loop preload="none" style="width: 95%; position: absolute; right: 15px;"
-            poster="../assets/videos/jstorm-thumbnail.JPG" controls>
+          <video class=" slide-up" onloadedmetadata="this.muted=true" loop preload="none"
+            style="width: 95%; position: absolute; right: 15px;" poster="../assets/videos/jstorm-thumbnail.JPG"
+            controls>
             <source src="../assets/videos/jstorm.mp4" type="video/mp4">
             <source src="movie.ogg" type="video/ogg">
             Your browser does not support the video tag.
@@ -115,7 +116,7 @@
 
     </div>
     <div class="row" style="width: 100%; height: 500px;">
-      <div class="col-md-6 jstorm-logo-fade-in" >
+      <div class="col-md-6 jstorm-logo-fade-in">
         <h2 style="font-family: 'avenirSemiBold'; color: #eb3b5a; text-align: right;">Bracket Studio Logo Design</h2>
         <p class="project-text">
           Logo created for the YouTube channel, <br> Bracket Studio.
@@ -124,7 +125,7 @@
       <div class="col-md-6">
         <div class="" style=" right: 15px;">
           <!-- <img style="width: 45%;" src="../assets/img/background/FlatDesignBSLogo.png"> -->
-          <video preload="none" style="width: 95%; position: absolute; right: 15px;"
+          <video preload="none" onloadedmetadata="this.muted=true" style="width: 95%; position: absolute; right: 15px;"
             poster="../assets/videos/bs-thumbnail.JPG" muted controls>
             <source src="../assets/videos/bsintro.mp4" type="video/mp4" muted>
             <source src="movie.ogg" type="video/ogg">
@@ -139,15 +140,15 @@
     <div class="row" style="width: 100%">
       <div class="col-md-6" style="height: 500px;">
         <div class="video slide-right" style="position: absolute; top: 10px; width: 95%;">
-          <video class=" slide-right" loop preload="none" style="width: 95%;" controls
-            poster="../assets/img/background/ionic.JPG">
+          <video class=" slide-right" onloadedmetadata="this.muted=true" loop preload="none" style="width: 95%;"
+            controls poster="../assets/img/background/ionic.JPG">
             <source src="../assets/videos/2019-08-30 10-50-35.mp4" type="video/mp4">
             <source src="movie.ogg" type="video/ogg">
             Your browser does not support the video tag.
           </video>
         </div>
       </div>
-      <div class="col-md-6 art-text-fade-in" >
+      <div class="col-md-6 art-text-fade-in">
         <h2 style="font-family: 'avenirSemiBold'; color: #eb3b5a;">Ionic Capstone Project</h2>
         <p class="project-text-right">
           A login page I created for my final capstone project while attending Codeup.
@@ -189,12 +190,21 @@
 <div class="row" style="width: 100%; margin: 0 !important;">
 
   <div class="col-6">
-    <img style="width: 85%; position: absolute; right: 15px;" src="../assets/img/aarongtrevinoresume2020.png ">
+    <img style="width: 85%; position: absolute; right: 15px;" src="../assets/aarongtrevinoresume2019sep.jpg">
 
   </div>
   <div class="col-6>" style="width: 50%">
     <!-- <h2 style="font-family: 'big'; color: #eb3b5a; text-align: left;">Proficiencies</h2> -->
     <div class="row" style="width: 100%;">
+      <div class="col-4 text-center">
+        <img class="proficiencies-img" src="../assets/proficiencies/cert_mark_ASE_badge.png">
+      </div>
+      <div class="col-4 text-center">
+        <img class="proficiencies-img" src="../assets/proficiencies/cert_mark_SP_badge.png">
+      </div>
+      <div class="col-4 text-center">
+        <!-- <img class="proficiencies-img" src="../assets/proficiencies/cert_mark_SP_badge.png"> -->
+      </div>
       <div class="col-4 text-center">
         <img class="proficiencies-img" src="../assets/proficiencies/html5.png">
       </div>
@@ -240,28 +250,13 @@
       <div class="col-4 text-center">
         <img class="proficiencies-img" src="../assets/proficiencies/aftereffect.png">
       </div>
+     
     </div>
-
-
-
-
-
-
-    <!-- <h2 style="font-family: 'big'; color: #eb3b5a; text-align: left;">Proficiencies</h2>
-      <p class="project-text-right">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-        magna aliqua.
-        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-      </p>
-      <br> -->
   </div>
-
 </div>
 <br>
 <div class="col-6">
-  <a href="../assets/aarongtrevinoresume2020.pdf" style="float: right;" download="Aaron G Trevino Resume 2019.pdf">
+  <a href="../assets/aarongtrevinoresume2020.pdf" style="float: right; " download="Aaron G Trevino Resume 2019.pdf">
     <button type="button" class="btn"
       style="background: #eb3b5a; color: #fefefe; font-weight: bold; letter-spacing: 4px; padding-bottom: 10px;">
       <i class="fa fa-download"></i>
