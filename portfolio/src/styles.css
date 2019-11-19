@@ -179,7 +179,7 @@ body {
 }
 
 .navbar-nav > li {
-  color: #FEFEFE !important;
+  color: #4e4e4f !important;
   display: inline-block;
   float:none;
 }
@@ -193,7 +193,7 @@ body {
 }
 
 .nav-link:hover {
-  color: #fefefe !important;
+  color: #4e4e4f !important;
   border-bottom: 3px solid rgb(235, 59, 90);
   transition: 400ms ease;
 }
