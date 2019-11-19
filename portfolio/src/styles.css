@@ -413,6 +413,7 @@ body {
 .nav-item > .nav-icon {
   position: relative;
   top: 0;
+  font-size: 15px;
   left: calc(50% + 7px);
   transition: top ease 0.3s;
   transition: ease 0.3s;
@@ -422,7 +423,7 @@ body {
   pointer-events:none;
 }
 .nav-item:hover > .nav-icon {
-  top: -25px;
+  top: -20px;
   opacity: 1;
   color: #fefefe;
   transition: ease 0.3s;
