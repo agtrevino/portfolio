@@ -7,6 +7,39 @@
   }
 
   @font-face {
+    font-family: 'ralewayLight';
+    src: url('../src/assets/fonts/Raleway-Light.ttf');
+  }
+  @font-face {
+    font-family: 'ralewayExtraLight';
+    src: url('../src/assets/fonts/Raleway-ExtraLight.ttf');
+  }
+  @font-face {
+    font-family: 'ralewayThin';
+    src: url('../src/assets/fonts/Raleway-Thin.ttf');
+  }
+
+  @font-face {
+    font-family: 'raleway';
+    src: url('../src/assets/fonts/Raleway-Regular.ttf');
+  }
+
+  @font-face {
+    font-family: 'ralewaySemi';
+    src: url('../src/assets/fonts/Raleway-SemiBold.ttf');
+  }
+
+  @font-face {
+    font-family: 'ralewayBold';
+    src: url('../src/assets/fonts/Raleway-Bold.ttf');
+  }
+
+  @font-face {
+    font-family: 'ralewayBlack';
+    src: url('../src/assets/fonts/Raleway-Black.ttf');
+  }
+
+  @font-face {
     font-family: 'big';
     src: url('../src/assets/fonts/BIGJOHN.otf');
   }
@@ -27,7 +60,7 @@
   }
 
   @font-face {
-    font-family: 'avenirSemiBold';
+    font-family: 'openSansSemiBold';
     src: url('../src/assets/fonts/OpenSans-Semibold.ttf');
   }
 
@@ -124,7 +157,7 @@ body {
 }
 
 .project-text {
-  font-family: 'avenirLight'; 
+  font-family: 'ralewayExtraLight'; 
   color: #fefefe; 
   text-align: right; 
   font-size: 30px; 
@@ -135,7 +168,7 @@ body {
 }
 
 .project-text-right {
-  font-family: 'avenirLight'; 
+  font-family: 'ralewayExtraLight'; 
   color: #fefefe; 
   text-align: left; 
   font-size: 30px; 
@@ -146,19 +179,20 @@ body {
 }
 
 .intro-paragraph {
+  letter-spacing: 3px;
   font-size: 25px;
   margin-top: 55px;
   margin-left: 20%;
   margin-right: 20%;
   color: #FEFEFE;
-  font-family: 'slim';
+  font-family: 'ralewayThin';
   font-weight: 600;
   text-align: right;
 }
 
 .intro-word-highlight {
-  font-size: 30px;
-  letter-spacing: 5px;
+  font-size: 25px;
+  letter-spacing: 3px;
   font-family: 'big';
   color: #eb3b5a;
 }
@@ -418,7 +452,7 @@ body {
   transition: top ease 0.3s;
   transition: ease 0.3s;
   transform: translateX(-50%);
-  color: #272727;
+  color: #fefefe;
   opacity: 0;
   pointer-events:none;
 }
