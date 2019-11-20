@@ -8,11 +8,17 @@
 
 * {
     font-family: 'ralewayThin' !important;
+    scroll-behavior: smooth !important;
+}
+
+body {
+  scroll-behavior: smooth !important;
 }
 
 .home-two-container {
     background: #fff !important;
     min-height: 100vh;
+    scroll-behavior: smooth !important;
 }
 .vertical-menu {
     z-index: 9999999999999;
