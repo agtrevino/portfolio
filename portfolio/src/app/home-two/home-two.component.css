@@ -168,3 +168,39 @@ body {
     top: 10px;
     right: 30px;
   }
+
+
+  .resume-two-viewport {
+    height: 30px;
+    position: absolute;
+    bottom: 30vh;
+    background: blue;
+    width: 100%;
+  }
+
+  .home-two-viewport {
+    height: 30px;
+    position: absolute;
+    bottom: 30vh;
+    background: blue;
+    width: 100%;
+  }
+
+  .projects-two-viewport {
+    height: 30px;
+    position: absolute;
+    bottom: 30vh;
+    background: blue;
+    width: 100%;
+  }
+
+  .active-nav {
+    opacity: 1;
+    transition: 300ms;
+  }
+
+  .active-circle {
+    background: #fff;
+    transition: 300ms;
+  }
+

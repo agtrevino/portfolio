@@ -83,7 +83,7 @@ $(window).scroll(function () {
   }
 });
 
-$("div").on('click', function(event) {
+$("div").on('click', function (event) {
 
   // Make sure this.hash has a value before overriding default behavior
   if (this.hash !== "") {
@@ -97,10 +97,31 @@ $("div").on('click', function(event) {
     // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
     $('html, body').animate({
       scrollTop: $(hash).offset().top
-    }, 800, function(){
+    }, 800, function () {
 
       // Add hash (#) to URL when done scrolling (default click behavior)
       window.location.hash = hash;
     });
   } // End if
+});
+
+console.log("00000000")
+$(window).scroll(function () {
+  console.log('1')
+  var scrollTop = $(window).scrollTop();
+  var windowHeight = $(window).height();
+  var first = false;
+  $(".activity").each(function () {
+    console.log('two')
+    var offset = $(this).offset();
+    if (scrollTop <= offset.top && ($(this).height() + offset.top) < (scrollTop + windowHeight) && first == false) {
+      $(this).addClass("first");
+      first = true;
+      console.log("sfsfasdfasdfadsf")
+    } else {
+      $(this).removeClass("first");
+      first = false;
+      console.log("asdfadsf")
+    }
+  });
 });
