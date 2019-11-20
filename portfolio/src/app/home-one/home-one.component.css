@@ -66,13 +66,19 @@
 
 
 html, body { 
-  scroll-behavior: smooth;
+  scroll-behavior: smooth !important;
   height: 100%; 
   transition: 400ms ease;
 }
 
+* {
+  scroll-behavior: smooth !important;
+}
+
 .vertical-text {
+  color: #FEFEFE;
   opacity: 0;
+  font-family: 'slim';
   position: fixed;
   top: 45%;
   font-size: 13px;
@@ -110,6 +116,13 @@ body {
 
 .main {
  padding: 90px 40px;
+}
+
+.personal-logo-1 {
+  height: 82%;
+  position: absolute;
+  top: 10px;
+  right: 40px;
 }
 
 .name-title {
@@ -262,7 +275,7 @@ body {
 }
 
 .col-4:hover .email-img {
-  background-image: linear-gradient(to top, rgba(0, 0, 0, .3)  , rgba(32, 32, 32, .8)), url("../../../src/assets/img/background/mail-img.jpg");
+  background-image: linear-gradient(to top, rgba(0, 0, 0, .3)  , rgba(32, 32, 32, .8)), url("../../assets/img/background/mail-img.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -273,7 +286,7 @@ body {
 }
 
 .col-4:hover  .phone-img{
-  background-image: linear-gradient(to top, rgba(0, 0, 0, .3)  , rgba(32, 32, 32, .8)), url("../../../src/assets/img/background/phone-img.jpg");
+  background-image: linear-gradient(to top, rgba(0, 0, 0, .3)  , rgba(32, 32, 32, .8)), url("../../assets/img/background/phone-img.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -283,8 +296,9 @@ body {
   text-decoration: none;
 }
 
+
 .col-4:hover  .linkedin-img{
-  background-image: linear-gradient(to top, rgba(0, 0, 0, .3)  , rgba(32, 32, 32, .8)), url("../../../src/assets/img/background/handshake-img.jpg");
+  background-image: linear-gradient(to top, rgba(0, 0, 0, .3)  , rgba(32, 32, 32, .8)), url("../../assets/img/background/handshake-img.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;

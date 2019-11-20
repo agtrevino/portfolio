@@ -1,0 +1,165 @@
+@import '~bootstrap/dist/css/bootstrap.min.css';
+
+@font-face {
+    font-family: 'ralewayThin';
+    src: url('../../assets/fonts/Raleway-Thin.ttf');
+  }
+
+
+* {
+    font-family: 'ralewayThin' !important;
+}
+
+.home-two-container {
+    background: #fff !important;
+    min-height: 100vh;
+}
+.vertical-menu {
+    z-index: 9999999999999;
+    position: fixed;
+    right: 25px;
+    width: 200px;
+    height: 100%;
+    top: 45%;
+  }
+  
+  .vertical-menu a {
+    background-color: transparent;
+    text-decoration: none !important;
+  }
+  
+  .line {
+      padding-top: 13px;
+      border-bottom: 2px solid #fff;
+      opacity: 0;
+      transition: 400ms;
+  }
+
+  .nav-link-text {
+      padding-top: 2px;
+      letter-spacing: 3px;
+      color: #fff !important;
+      opacity: 0;
+      transition: 400ms;
+      text-decoration: none !important;
+  }
+
+  .nav-circle {
+    border: 2px solid #fff;
+    border-radius: 999999px;
+    height: 10px;
+    position: absolute;
+    right: 25px;
+    top: 9px;
+    width: 10px;
+    background: transparent;
+    transition: 400ms;
+  }
+
+  .nav-link-container:hover .nav-circle {
+    background: #fff;
+    transition: 400ms;
+  }
+
+  .nav-link-container:hover .nav-link-text,
+  .nav-link-container:hover .line {
+      text-decoration: none !important;
+    opacity: 1;
+    transition: 400ms;
+  }
+
+  /* =============================================== PARALLAX ============================== */
+  .wrapper {
+    /* The height needs to be set to a fixed value for the effect to work.
+     * 100vh is the full height of the viewport. */
+    height: 100vh;
+    /* The scaling of the images would add a horizontal scrollbar, so disable x overflow. */
+    overflow-x: hidden;
+    /* Enable scrolling on the page. */
+    overflow-y: auto;
+    /* Set the perspective to 2px. This is essentailly the simulated distance from the viewport to transformed objects.*/
+    perspective: 2px;
+  }
+  
+  .section {
+    /* Needed for children to be absolutely positioned relative to the parent. */
+    position: relative;
+    /* The height of the container. Must be set, but it doesn't really matter what the value is. */
+    height: 100vh;
+  
+    /* For text formatting. */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    /* text-shadow: 0 0 5px #fff; */
+  }
+  
+  .parallax::after {
+    /* Display and position the pseudo-element */
+    content: " ";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  
+    /* Move the pseudo-element back away from the camera,
+     * then scale it back up to fill the viewport.
+     * Because the pseudo-element is further away, it appears to move more slowly, like in real life. */
+    transform: translateZ(-1px) scale(1.5);
+    /* Force the background image to fill the whole element. */
+    background-size: 100%;
+    /* Keep the image from overlapping sibling elements. */
+    z-index: -1;
+  }
+  
+  /* The styling for the static div. */
+  .static {
+    background: red;
+  }
+  
+  /* Sets the actual background images to adorable kitties. This part is crucial. */
+  .bg1::after {
+    background-image: linear-gradient(to right, rgba(0, 0, 0, .8)  , rgba(0, 0, 0, .9)), url("../../assets/img/background/tunnel-1.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  .bg2::after {
+    background-image: url('https://placekitten.com/g/800/600');
+  }
+
+  .ui-ux-img {
+    width: 52%;
+    opacity: .8;
+  }
+
+  .intro-paragraph-2 {
+      padding: 20px 30%;
+      font-size: 20px;
+      color: #fff;
+  }
+
+  .vertical-text {
+    z-index: 20;
+    color: #FEFEFE;
+    position: fixed;
+    top: 43%;
+    font-size: 15px;
+    left: 10px;
+    letter-spacing: 5px;
+    transform: rotate(180deg);
+    writing-mode: vertical-lr;
+    font-weight: 900;
+    transition: 400ms;
+   }
+
+   .personal-logo-1 {
+    width: 70px;
+    z-index: 20;
+    position: absolute;
+    top: 10px;
+    right: 30px;
+  }

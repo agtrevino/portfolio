@@ -50,8 +50,6 @@ $(window).scroll(function () {
     }
 
   });
-
-
 });
 
 
@@ -78,3 +76,4 @@ $(window).scroll(function () {
     $('.slide-up').css('transition', '600ms');
   }
 });
+
