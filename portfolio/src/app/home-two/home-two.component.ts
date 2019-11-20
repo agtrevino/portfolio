@@ -40,8 +40,10 @@ export class HomeTwoComponent implements OnInit {
         if (scrollTop <= offset.top && ($(this).height() + offset.top) < (scrollTop + windowHeight) && first == false) {
           $('.resume-nav').addClass("active-nav");
           $('.resume-circle').addClass("active-circle");
+          $('.vertical-text').addClass("color-black");
           first = true;
         } else {
+          $('.vertical-text').removeClass("color-black");
           $('.resume-circle').removeClass("active-circle");
           $('.resume-nav').removeClass("active-nav");
           first = false;
