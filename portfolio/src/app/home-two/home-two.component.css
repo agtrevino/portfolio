@@ -15,9 +15,19 @@
     src: url('../../assets/fonts/Raleway-Light.ttf');
   }
 
+  @font-face {
+    font-family: 'ralewayBold';
+    src: url('../../assets/fonts/Raleway-ExtraBold.ttf');
+  }
+
+  @font-face {
+    font-family: 'ralewayBlack';
+    src: url('../../assets/fonts/Raleway-Black.ttf');
+  }
+
 
 * {
-    font-family: 'ralewayThin' ;
+    font-family: 'ralewayLight' ;
     scroll-behavior: smooth !important;
 }
 
@@ -107,7 +117,6 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: white;
     /* text-shadow: 0 0 5px #fff; */
   }
   
@@ -137,10 +146,33 @@ body {
   
   /* Sets the actual background images to adorable kitties. This part is crucial. */
   .bg1::after {
-    background-image: linear-gradient(to right, rgba(0, 0, 0, .5)  , rgba(0, 0, 0, .7)), url("../../assets/img/background/graffiti-fence-1.jpg");
+    background-image: linear-gradient(to right, rgba(0, 0, 0, .6)  , rgba(0, 0, 0, .7)), url("../../assets/img/background/graffiti-fence-1.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+  }
+
+  .resume-two-container {
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 1)  , rgba(255, 255, 255, 1)), url("../../assets/img/background/headphones-1-bw.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    position: relative;
+    height: 100vh;
+    display: flex;
+    /* align-items: center; */
+    /* justify-content: center; */
+    /* text-shadow: 0 0 5px #fff; */
+  }
+
+  .resume-content {
+    padding: 4% 10%;
+  }
+
+  .projects-title {
+    font-family: 'ralewayBold';
+    letter-spacing: 0px;
   }
   
   .bg2::after {
@@ -202,9 +234,6 @@ body {
     transition: 300ms;
   }
 
-  .resume-two-container {
-    background: #fefefe;
-  }
 
   .color-black {
     color: #000 !important;
