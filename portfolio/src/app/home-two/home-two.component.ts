@@ -39,12 +39,18 @@ export class HomeTwoComponent implements OnInit {
         var offset = $(this).offset();
         if (scrollTop <= offset.top && ($(this).height() + offset.top) < (scrollTop + windowHeight) && first == false) {
           $('.resume-nav').addClass("active-nav");
-          $('.resume-circle').addClass("active-circle");
-          $('.vertical-text').addClass("color-black");
+          $('.resume-circle').addClass("active-circle-black");
+          $('.vertical-text-2').addClass("color-black");
+          $('.nav-link-text').addClass("color-black");
+          $('.line').addClass("line-black");
+          $('.nav-circle').addClass("circle-black");
           first = true;
         } else {
-          $('.vertical-text').removeClass("color-black");
-          $('.resume-circle').removeClass("active-circle");
+          $('.nav-link-text').removeClass("color-black");
+          $('.line').removeClass("line-black");
+          $('.nav-circle').removeClass("circle-black");
+          $('.vertical-text-2').removeClass("color-black");
+          $('.resume-circle').removeClass("active-circle-black");
           $('.resume-nav').removeClass("active-nav");
           first = false;
         }
