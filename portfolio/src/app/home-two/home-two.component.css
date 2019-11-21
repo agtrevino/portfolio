@@ -9,10 +9,12 @@
   font-family: 'ralewayLight';
   src: url('../../../src/assets/fonts/Raleway-Light.ttf');
 }
+
 @font-face {
   font-family: 'ralewayExtraLight';
   src: url('../../../src/assets/fonts/Raleway-ExtraLight.ttf');
 }
+
 @font-face {
   font-family: 'ralewayThin';
   src: url('../../../src/assets/fonts/Raleway-Thin.ttf');
@@ -31,6 +33,11 @@
 @font-face {
   font-family: 'ralewayBold';
   src: url('../../../src/assets/fonts/Raleway-Bold.ttf');
+}
+
+@font-face {
+  font-family: 'ralewayExtraBold';
+  src: url('../../../src/assets/fonts/Raleway-ExtraBold.ttf');
 }
 
 @font-face {
@@ -408,7 +415,7 @@ header .overlay {
 }
 
 .header-1 {
-  font-family: 'ralewaySemi', sans-serif;
+  font-family: 'ralewayExtraBold', sans-serif;
   font-size: 64px;
   font-style: normal;
   font-weight: 800;
@@ -416,6 +423,8 @@ header .overlay {
   line-height: 52px;
   text-transform: uppercase;
   color: #FFFFFF;
+  border-left: 4px solid #eb3b5a;
+  padding-left: 24px;
   }
 
   .project-container {
@@ -425,3 +434,44 @@ header .overlay {
     margin: 0 !important;
     z-index: 999999999;
   }
+
+  /* Animation */
+
+@keyframes fadeInUp {
+  from {
+      transform: translate3d(0,40px,0)
+  }
+
+  to {
+      transform: translate3d(0,0,0);
+      opacity: 1
+  }
+}
+
+@-webkit-keyframes fadeInUp {
+  from {
+      transform: translate3d(0,40px,0)
+  }
+
+  to {
+      transform: translate3d(0,0,0);
+      opacity: 1
+  }
+}
+
+.animated {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-fill-mode: both
+}
+
+.animatedFadeInUp {
+  opacity: 0
+}
+
+.fadeInUp {
+  opacity: 0;
+  animation-name: fadeInUp;
+  -webkit-animation-name: fadeInUp;
+}

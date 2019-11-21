@@ -11,18 +11,19 @@ export class HomeTwoComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    // var vid = document.getElementById("video1");
-    // vid.muted = true;
-
     $('.home-nav').addClass("active-nav");
     $('.home-circle').addClass("active-circle");
+    this.navViewCheck();
+    this.resumeTitleViewCheck();
+  }
+
+  navViewCheck() {
     $('.wrapper').scroll(function () {
       var scrollTop = $(window).scrollTop();
       var windowHeight = $(window).height();
-      var first = false;
       $(".home-two-viewport").each(function () {
         var offset = $(this).offset();
-        if (scrollTop <= offset.top && ($(this).height() + offset.top) < (scrollTop + windowHeight) && first == false) {
+        if (scrollTop <= offset.top && ($(this).height() + offset.top) < (scrollTop + windowHeight)) {
           $('.home-nav').addClass("active-nav");
           $('.home-circle').addClass("active-circle");
           $('.projects-circle').removeClass("active-circle");
@@ -33,21 +34,15 @@ export class HomeTwoComponent implements OnInit {
           $('.vertical-text-2').removeClass("color-black");
           $('.resume-circle').removeClass("active-circle-black");
           $('.resume-nav').removeClass("active-nav");
-          first = true;
-        } else {
           
-          first = false;
+        } else {
+
+          
         }
       });
-    });
-     
-    $('.wrapper').scroll(function () {
-      var scrollTop = $(window).scrollTop();
-      var windowHeight = $(window).height();
-      var first = false;
       $(".resume-two-viewport").each(function () {
         var offset = $(this).offset();
-        if (scrollTop <= offset.top && ($(this).height() + offset.top) < (scrollTop + windowHeight) && first == false) {
+        if (scrollTop <= offset.top && ($(this).height() + offset.top) < (scrollTop + windowHeight)) {
           $('.resume-nav').addClass("active-nav");
           $('.resume-circle').addClass("active-circle-black");
           $('.vertical-text-2').addClass("color-black");
@@ -58,21 +53,15 @@ export class HomeTwoComponent implements OnInit {
           $('.projects-nav').removeClass("active-nav");
           $('.home-circle').removeClass("active-circle");
           $('.home-nav').removeClass("active-nav");
-          first = true;
-        } else {
           
-          first = false;
+        } else {
+
+          
         }
       });
-    });
-
-    $('.wrapper').scroll(function () {
-      var scrollTop = $(window).scrollTop();
-      var windowHeight = $(window).height();
-      var first = false;
       $(".projects-two-viewport").each(function () {
         var offset = $(this).offset();
-        if (scrollTop <= offset.top && ($(this).height() + offset.top) < (scrollTop + windowHeight) && first == false) {
+        if (scrollTop <= offset.top && ($(this).height() + offset.top) < (scrollTop + windowHeight)) {
           $('.projects-nav').addClass("active-nav");
           $('.projects-circle').addClass("active-circle");
           $('.nav-link-text').removeClass("color-black");
@@ -81,56 +70,85 @@ export class HomeTwoComponent implements OnInit {
           $('.vertical-text-2').removeClass("color-black");
           $('.resume-circle').removeClass("active-circle-black");
           $('.resume-nav').removeClass("active-nav");
-          first = true;
+          
         } else {
 
-          first = false;
+          
         }
       });
-    });
-
-    $('.wrapper').scroll(function () {
-      var scrollTop = $(window).scrollTop();
-      var windowHeight = $(window).height();
-      var first = false;
       $(".project-two-viewport-two").each(function () {
         var offset = $(this).offset();
-        if (scrollTop <= offset.top && ($(this).height() + offset.top) < (scrollTop + windowHeight) && first == false) {
+        if (scrollTop <= offset.top && ($(this).height() + offset.top) < (scrollTop + windowHeight)) {
           $('.projects-nav').addClass("active-nav");
           $('.projects-circle').addClass("active-circle");
           $('.resume-circle').removeClass("active-circle-black");
           $('.resume-nav').removeClass("active-nav");
-          first = true;
-        } else {
           
-          first = false;
+        } else {
+
+          
         }
       });
-    });
-
-    $('.wrapper').scroll(function () {
-      var scrollTop = $(window).scrollTop();
-      var windowHeight = $(window).height();
-      var first = false;
       $(".contact-two-viewport").each(function () {
         var offset = $(this).offset();
-        if (scrollTop <= offset.top && ($(this).height() + offset.top) < (scrollTop + windowHeight) && first == false) {
+        if (scrollTop <= offset.top && ($(this).height() + offset.top) < (scrollTop + windowHeight)) {
           $('.contact-nav').addClass("active-nav");
           $('.contact-circle').addClass("active-circle");
           $('.projects-circle').removeClass("active-circle");
           $('.projects-nav').removeClass("active-nav");
-          first = true;
+          
         } else {
           $('.contact-circle').removeClass("active-circle");
           $('.contact-nav').removeClass("active-nav");
-          first = false;
+          
         }
       });
     });
+  }
 
-   
+  resumeTitleViewCheck() {
+    $('.wrapper').scroll(function () {
+      var scrollTop = $(window).scrollTop();
+      var windowHeight = $(window).height();
+      $(".creative-title").each(function () {
+        var offset = $(this).offset();
+        if (scrollTop <= offset.top && ($(this).height() + offset.top) < (scrollTop + windowHeight)) {
+          $('.creative-row').addClass("fadeInUp");
+
+        } else {
+        }
+      });
+      $(".detail-title").each(function () {
+        var offset = $(this).offset();
+        if (scrollTop <= offset.top && ($(this).height() + offset.top) < (scrollTop + windowHeight)) {
+          $('.detail-row').addClass("fadeInUp");
+
+        } else {
+
+        }
+      });
+      $(".team-title").each(function () {
+        var offset = $(this).offset();
+        if (scrollTop <= offset.top && ($(this).height() + offset.top) < (scrollTop + windowHeight)) {
+          $('.team-row').addClass("fadeInUp");
+
+        } else {
+
+        }
+      });
+      $(".jstorm-title").each(function () {
+        var offset = $(this).offset();
+        if (scrollTop <= offset.top && ($(this).height() + offset.top) < (scrollTop + windowHeight)) {
+          $('.jstorm-title').addClass("fadeInUp");
+        } else {
+
+        }
+      });
+    });
   }
 }
+
+
 
 
 
