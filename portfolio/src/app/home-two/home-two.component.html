@@ -182,10 +182,16 @@
     <div class="projects-two-viewport"></div>
   </section>
   <section id="projectsContOne" class="section project-two-container-two">
-    <video autoplay muted loop id="video1">
-      <source  src="../../assets/videos/jstorm.mp4" type="video/mp4">
+    <header>
+      <div class="overlay"></div>
+      <video playsinline loop autoplay [muted]="'muted'">
+        <source src="../../assets/videos/jstorm.mp4" type="video/mp4">
+      </video>
+    </header>
+    <!-- <video autoplay muted loop id="video1">
+      <source src="../../assets/videos/jstorm.mp4" type="video/mp4">
       Your browser does not support HTML5 video.
-    </video>
+    </video> -->
     <div class="project-two-viewport-two"></div>
   </section>
 </main>
