@@ -58,7 +58,6 @@ $(window).scroll(function () {
 
 });
 
-
 $(window).scroll(function () {
   if ($(this).scrollTop() > 120) {
     $('.slide-right').css('left', '15px');
@@ -105,7 +104,6 @@ $("div").on('click', function (event) {
   } // End if
 });
 
-console.log("00000000")
 $(window).scroll(function () {
   console.log('1')
   var scrollTop = $(window).scrollTop();

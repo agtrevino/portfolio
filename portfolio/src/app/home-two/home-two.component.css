@@ -1,30 +1,67 @@
 @import '~bootstrap/dist/css/bootstrap.min.css';
 
 @font-face {
-    font-family: 'ralewayThin';
-    src: url('../../assets/fonts/Raleway-Thin.ttf');
-  }
+  font-family: 'dense';
+  src: url('../../../src/assets/fonts/Dense-Regular.otf');
+}
 
-  @font-face {
-    font-family: 'ralewayExtraLight';
-    src: url('../../assets/fonts/Raleway-ExtraLight.ttf');
-  }
+@font-face {
+  font-family: 'ralewayLight';
+  src: url('../../../src/assets/fonts/Raleway-Light.ttf');
+}
+@font-face {
+  font-family: 'ralewayExtraLight';
+  src: url('../../../src/assets/fonts/Raleway-ExtraLight.ttf');
+}
+@font-face {
+  font-family: 'ralewayThin';
+  src: url('../../../src/assets/fonts/Raleway-Thin.ttf');
+}
 
-  @font-face {
-    font-family: 'ralewayLight';
-    src: url('../../assets/fonts/Raleway-Light.ttf');
-  }
+@font-face {
+  font-family: 'raleway';
+  src: url('../../../src/assets/fonts/Raleway-Regular.ttf');
+}
 
-  @font-face {
-    font-family: 'ralewayBold';
-    src: url('../../assets/fonts/Raleway-ExtraBold.ttf');
-  }
+@font-face {
+  font-family: 'ralewaySemi';
+  src: url('../../../src/assets/fonts/Raleway-SemiBold.ttf');
+}
 
-  @font-face {
-    font-family: 'ralewayBlack';
-    src: url('../../assets/fonts/Raleway-Black.ttf');
-  }
+@font-face {
+  font-family: 'ralewayBold';
+  src: url('../../../src/assets/fonts/Raleway-Bold.ttf');
+}
 
+@font-face {
+  font-family: 'ralewayBlack';
+  src: url('../../../src/assets/fonts/Raleway-Black.ttf');
+}
+
+@font-face {
+  font-family: 'big';
+  src: url('../../../src/assets/fonts/BIGJOHN.otf');
+}
+
+@font-face {
+  font-family: 'slim';
+  src: url('../../../src/assets/fonts/SlimJoe.otf');
+}
+
+@font-face {
+  font-family: 'avenirRegular';
+  src: url('../../../src/assets/fonts/AvenirLTStd-Book.woff');
+}
+
+@font-face {
+  font-family: 'avenirLight';
+  src: url('../../../src/assets/fonts/AvenirLTStd-LightCopy.woff');
+}
+
+@font-face {
+  font-family: 'trumpGothicEast';
+  src: url('../../../src/assets/fonts/trump_gothic_east_bold.ttf');
+}
 
 * {
     font-family: 'ralewayLight' ;
@@ -146,7 +183,7 @@ body {
   
   /* Sets the actual background images to adorable kitties. This part is crucial. */
   .bg1::after {
-    background-image: linear-gradient(to right, rgba(0, 0, 0, .6)  , rgba(0, 0, 0, .7)), url("../../assets/img/background/graffiti-fence-1.jpg");
+    background-image: linear-gradient(to left, rgba(0, 0, 0, .7)  , rgba(0, 0, 0, .85)), url("../../assets/img/background/graffiti-fence-1.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -159,7 +196,7 @@ body {
     background-size: cover;
 
     position: relative;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     /* align-items: center; */
     /* justify-content: center; */
@@ -193,7 +230,7 @@ body {
 
   .vertical-text-2 {
     z-index: 20;
-    color: #FEFEFE;
+    color: #eb3b5a;
     position: fixed;
     top: 43%;
     font-size: 15px;
@@ -240,6 +277,7 @@ body {
     color: #000 !important;
     transition: 400ms;
     font-family: 'ralewayLight' !important;
+    font-weight: 700;
   }
 
   .line-black {
@@ -255,4 +293,24 @@ body {
   .active-circle-black {
     background: #000;
     transition: 400ms;
+  }
+
+
+  .resume-title {
+    font-family: 'ralewayBold';
+  }
+
+  .resume-img {
+    width: 75%;
+    box-shadow: 3px 3px 8px;
+  }
+
+  .proficiencies-title {
+    font-family: 'trumpGothicEast';
+    border-bottom: 3px solid #eb3b5a;
+  }
+  
+  .prof-icon {
+    max-height: 52px;
+    margin-right: 25px;
   }
