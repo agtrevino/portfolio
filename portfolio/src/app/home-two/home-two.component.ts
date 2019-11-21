@@ -22,6 +22,8 @@ export class HomeTwoComponent implements OnInit {
         if (scrollTop <= offset.top && ($(this).height() + offset.top) < (scrollTop + windowHeight) && first == false) {
           $('.home-nav').addClass("active-nav");
           $('.home-circle').addClass("active-circle");
+          $('.projects-circle').removeClass("active-circle");
+          $('.projects-nav').removeClass("active-nav");
           first = true;
         } else {
           $('.home-circle').removeClass("active-circle");
@@ -44,6 +46,8 @@ export class HomeTwoComponent implements OnInit {
           $('.nav-link-text').addClass("color-black");
           $('.line').addClass("line-black");
           $('.nav-circle').addClass("circle-black");
+          $('.projects-circle').removeClass("active-circle");
+          $('.projects-nav').removeClass("active-nav");
           first = true;
         } else {
           $('.nav-link-text').removeClass("color-black");
@@ -68,8 +72,7 @@ export class HomeTwoComponent implements OnInit {
           $('.projects-circle').addClass("active-circle");
           first = true;
         } else {
-          $('.projects-circle').removeClass("active-circle");
-          $('.projects-nav').removeClass("active-nav");
+
           first = false;
         }
       });
@@ -84,10 +87,29 @@ export class HomeTwoComponent implements OnInit {
         if (scrollTop <= offset.top && ($(this).height() + offset.top) < (scrollTop + windowHeight) && first == false) {
           $('.contact-nav').addClass("active-nav");
           $('.contact-circle').addClass("active-circle");
+          $('.projects-circle').removeClass("active-circle");
+          $('.projects-nav').removeClass("active-nav");
           first = true;
         } else {
           $('.contact-circle').removeClass("active-circle");
           $('.contact-nav').removeClass("active-nav");
+          first = false;
+        }
+      });
+    });
+
+    $('.wrapper').scroll(function () {
+      var scrollTop = $(window).scrollTop();
+      var windowHeight = $(window).height();
+      var first = false;
+      $(".project-two-viewport-two").each(function () {
+        var offset = $(this).offset();
+        if (scrollTop <= offset.top && ($(this).height() + offset.top) < (scrollTop + windowHeight) && first == false) {
+          $('.projects-nav').addClass("active-nav");
+          $('.projects-circle').addClass("active-circle");
+          first = true;
+        } else {
+          
           first = false;
         }
       });

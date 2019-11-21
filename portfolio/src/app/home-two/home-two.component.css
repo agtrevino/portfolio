@@ -39,6 +39,11 @@
 }
 
 @font-face {
+  font-family: 'ralewayExtraLightItalics';
+  src: url('../../../src/assets/fonts/Raleway-ExtraLightItalic.ttf');
+}
+
+@font-face {
   font-family: 'big';
   src: url('../../../src/assets/fonts/BIGJOHN.otf');
 }
@@ -190,7 +195,7 @@ body {
   }
 
   .bg2::after {
-    background-image: linear-gradient(to left, rgba(0, 0, 0, .7)  , rgba(0, 0, 0, .85)), url("../../assets/img/background/headphones-1-bw.jpg");
+    background-image: linear-gradient(to right, rgba(0, 0, 0, .6)  , rgba(0, 0, 0, .75)), url("../../assets/img/background/headphones-1-bw.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -257,7 +262,8 @@ body {
   .resume-two-viewport,
   .home-two-viewport,
   .projects-two-viewport,
-  .contact-two-viewport {
+  .contact-two-viewport,
+  .project-two-viewport-two {
     height: 30px;
     position: absolute;
     bottom: 30vh;
@@ -300,7 +306,7 @@ body {
 
 
   .resume-title {
-    color: #505464;
+    color: #eb3b5a;
     font-family: 'ralewayBold';
   }
 
@@ -328,4 +334,26 @@ body {
     letter-spacing: 2px;
     margin-bottom: 42px;
     color: #505464;
+  }
+
+  .quote-one {
+    color: #fff;
+    font-family: 'ralewayExtraLightItalics';
+
+  }
+
+  .quote-author {
+    color: #fff;
+    letter-spacing: 2px;
+    font-weight: 700;
+    font-family: 'trumpGothicEast';
+  }
+
+  .project-two-container-two {
+    background: #505464;
+  }
+
+  .chevron {
+    position: absolute;
+    bottom: 30px;
   }
