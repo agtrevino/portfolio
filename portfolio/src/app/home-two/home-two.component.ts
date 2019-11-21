@@ -11,6 +11,9 @@ export class HomeTwoComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    var vid = document.getElementById("video1");
+    vid.muted = true;
+
     $('.home-nav').addClass("active-nav");
     $('.home-circle').addClass("active-circle");
     $('.wrapper').scroll(function () {
@@ -32,7 +35,7 @@ export class HomeTwoComponent implements OnInit {
         }
       });
     });
-
+     
     $('.wrapper').scroll(function () {
       var scrollTop = $(window).scrollTop();
       var windowHeight = $(window).height();
