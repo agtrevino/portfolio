@@ -148,8 +148,9 @@ export class HomeTwoComponent implements OnInit {
         var offset = $(this).offset();
         if (scrollTop <= offset.top && ($(this).height() + offset.top) < (scrollTop + windowHeight)) {
           $('.jstorm-title-2').addClass("fadeInUp");
+          $('.vertical-text-2').addClass("color-white");
         } else {
-          
+          $('.vertical-text-2').removeClass("color-white");
         }
       });
     });

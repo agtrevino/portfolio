@@ -374,7 +374,7 @@ body {
     overflow: hidden;
 }
 
-header video {
+  .jstorm-video {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -513,6 +513,26 @@ header .overlay {
   -webkit-animation-name: fadeInUp;
 }
 
+.color-white {
+  color: #fff !important;
+  transition: 300ms;
+}
+
+.website-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: 0;
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+}
+
 
 @media only screen and (max-width: 680px) {
 
@@ -606,5 +626,6 @@ header .overlay {
     color: #fff;
     font-family: 'ralewaySemi';
   }
+
 
 }
