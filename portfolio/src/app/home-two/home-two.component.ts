@@ -35,10 +35,7 @@ export class HomeTwoComponent implements OnInit {
           $('.resume-circle').removeClass("active-circle-black");
           $('.resume-nav').removeClass("active-nav");
           
-        } else {
-
-          
-        }
+        } 
       });
       $(".resume-two-viewport").each(function () {
         var offset = $(this).offset();
@@ -54,10 +51,7 @@ export class HomeTwoComponent implements OnInit {
           $('.home-circle').removeClass("active-circle");
           $('.home-nav').removeClass("active-nav");
           
-        } else {
-
-          
-        }
+        } 
       });
       $(".projects-two-viewport").each(function () {
         var offset = $(this).offset();
@@ -149,6 +143,9 @@ export class HomeTwoComponent implements OnInit {
         if (scrollTop <= offset.top && ($(this).height() + offset.top) < (scrollTop + windowHeight)) {
           $('.jstorm-title-2').addClass("fadeInUp");
           $('.vertical-text-2').addClass("color-white");
+          setTimeout(function(){
+            $('.jstorm-text').addClass("fadeInUp"); 
+          }, 300);
         } else {
           $('.vertical-text-2').removeClass("color-white");
         }

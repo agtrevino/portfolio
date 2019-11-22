@@ -319,7 +319,7 @@ body {
 
   .resume-img {
     width: 95%;
-    box-shadow: 3px 3px 8px;
+    box-shadow: 13px 13px 5px -12px #505464;
   }
 
   .proficiencies-title {
@@ -579,7 +579,7 @@ header .overlay {
 
   .resume-img {
     width: 100%;
-    box-shadow: 3px 3px 8px;
+    box-shadow: 13px 13px 5px -12px #505464;
   }
 
   .projects-quote-container {
