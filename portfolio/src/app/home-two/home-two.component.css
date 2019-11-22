@@ -439,6 +439,39 @@ header .overlay {
     padding: 0 210px;
   }
 
+  .jstorm-right-section {
+    position: relative;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .section-alt {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .jstorm-text {
+    font-size: 22px;
+    color: #fff;
+    font-family: 'ralewaySemi';
+  }
+
+  .jstorm-title-2 {
+    font-family: 'ralewayExtraBold', sans-serif;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 800;
+    letter-spacing: -1px;
+    line-height: 52px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    border-right: 6px solid #eb3b5a;
+    padding-right: 24px;
+  }
+
   /* Animation */
 
 @keyframes fadeInUp {
@@ -478,4 +511,100 @@ header .overlay {
   opacity: 0;
   animation-name: fadeInUp;
   -webkit-animation-name: fadeInUp;
+}
+
+
+@media only screen and (max-width: 680px) {
+
+  .intro-paragraph-2 {
+    padding: 20px 50px;
+    text-align: left;
+  }
+
+  .ui-ux-img {
+    width: 100%;
+    opacity: .8;
+  }
+
+  .vertical-menu {
+    z-index: 9999999999999;
+    position: fixed;
+    right: 12px;
+    width: 80px;
+    top: 45%;
+  }
+
+  .nav-line,
+  .nav-link-text {
+    display: none;
+  }
+
+  .personal-logo-1 {
+    display: none;
+    width: 70px;
+    z-index: 20;
+    position: absolute;
+    top: 10px;
+    right: 30px;
+  }
+
+  .resume-content {
+    width: 100%;
+    padding: 4% 35px;
+  }
+
+  .nav-link-container {
+    margin-bottom: 30px !important;
+  }
+
+  .resume-img {
+    width: 100%;
+    box-shadow: 3px 3px 8px;
+  }
+
+  .projects-quote-container {
+    padding: 0 50px;
+  }
+
+  .quote-one {
+    text-align: left;
+    font-size: 24px;
+  }
+
+  .header-1 {
+    font-family: 'ralewayExtraBold', sans-serif;
+    font-size: 42px;
+    font-style: normal;
+    font-weight: 800;
+    letter-spacing: 0px;
+    line-height: 34px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    border-left: 6px solid #eb3b5a;
+    padding-left: 24px;
+  }
+  
+  .jstorm-title-2 {
+    font-family: 'ralewayExtraBold', sans-serif;
+    font-size: 42px;
+    font-style: normal;
+    font-weight: 800;
+    letter-spacing: 0px;
+    line-height: 34px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    border-right: 6px solid #eb3b5a;
+    padding-right: 24px;
+  }
+
+  .jstorm-logo-section {
+    padding: 0 34px;
+  }
+
+  .jstorm-text {
+    font-size: 16px;
+    color: #fff;
+    font-family: 'ralewaySemi';
+  }
+
 }

@@ -144,6 +144,14 @@ export class HomeTwoComponent implements OnInit {
 
         }
       });
+      $(".jstorm-title-2").each(function () {
+        var offset = $(this).offset();
+        if (scrollTop <= offset.top && ($(this).height() + offset.top) < (scrollTop + windowHeight)) {
+          $('.jstorm-title-2').addClass("fadeInUp");
+        } else {
+          
+        }
+      });
     });
   }
 }
