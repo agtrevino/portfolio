@@ -415,6 +415,7 @@ header .overlay {
 }
 
 .header-1 {
+  text-align: left;
   font-family: 'ralewayExtraBold', sans-serif;
   font-size: 64px;
   font-style: normal;
@@ -470,6 +471,17 @@ header .overlay {
     color: #FFFFFF;
     border-right: 6px solid #eb3b5a;
     padding-right: 24px;
+  }
+
+  .arrow-down {
+    position: relative;
+    left: 63px;
+  }
+
+  .arrow-down-2 {
+    position: relative;
+    z-index: 999999999;
+    left: 18px;
   }
 
   /* Animation */
