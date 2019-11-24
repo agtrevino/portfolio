@@ -11,8 +11,9 @@ export class HomeTwoComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    $('.home-nav').addClass("active-nav");
-    $('.home-circle').addClass("active-circle");
+    // $('.home-nav').addClass("active-nav");
+    // $('.home-circle').addClass("active-circle");
+    this.navAnim();
     this.navViewCheck();
     this.resumeTitleViewCheck();
   }
@@ -142,6 +143,38 @@ export class HomeTwoComponent implements OnInit {
       });
     });
   };
+
+  navAnim() {
+    setTimeout(function () {
+      $('#home-nav').addClass("fadeInUp");
+      setTimeout(function () {
+        $('#resume-nav').addClass("fadeInUp");
+        setTimeout(function () {
+          $('#projects-nav').addClass("fadeInUp");
+          setTimeout(function () {
+            $('#contact-nav').addClass("fadeInUp");
+            setTimeout(function () {
+              
+              $('.home-circle').addClass("active-circle");
+              setTimeout(function () {
+                $('.home-nav').addClass("active-nav");
+              }, 300)
+            }, 300)
+          }, 300)
+        }, 300)
+      }, 300)
+    }, 300)
+
+
+
+
+
+
+
+
+
+
+  }
 }
 
 

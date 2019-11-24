@@ -276,6 +276,7 @@ body {
     top: 30vh;
     background: transparent;
     width: 100%;
+    z-index: -99;
    }
 
   .active-nav {
