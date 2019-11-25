@@ -197,7 +197,7 @@ body {
   
   
   .bg1::after {
-    background-image: linear-gradient(to right,rgba(80, 84, 100, .94)  , rgba(80, 84, 100, .94)), url("../../assets/img/background/graffiti-2.jpg");
+    background-image: linear-gradient(to right,rgba(80, 84, 100, .97)  , rgba(80, 84, 100, .97)), url("../../assets/img/background/graffiti-2.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -585,7 +585,7 @@ header .overlay {
 	text-align: left;
 	text-shadow: 1px 1px 1px rgba(255,255,255,0.8);
 }
-.rw-sentence span{
+.rw-sentence .word-span{
 	color: #444;
 	font-size: 200%;
 	font-weight: normal;
@@ -594,48 +594,43 @@ header .overlay {
 	display: inline;
 	text-indent: 10px;
 }
-.rw-words-1 span{
+.rw-words-1 .word-span{
   font-family: 'ralewayExtraBold';
   letter-spacing: -1px;
 	position: absolute;
   opacity: 0;
   top: 43px;
-	overflow: hidden;
-	color: #6b969d;
+	/* overflow: hidden; */
+	color: #1dd1a1;
 	-webkit-animation: rotateWord 10s linear infinite 0s;
 	-ms-animation: rotateWord 10s linear infinite 0s;
 	animation: rotateWord 10s linear infinite 0s;
 }
-.rw-words-1 span:nth-child(2) { 
+.rw-words-1 .word-span:nth-child(2) { 
     -webkit-animation-delay: 2s; 
 	-ms-animation-delay: 2s; 
 	animation-delay: 2s; 
-	color: #6b889d;
+	color: #fad390;
 }
-.rw-words-1 span:nth-child(3) { 
+.rw-words-1 .word-span:nth-child(3) { 
     -webkit-animation-delay: 4s; 
 	-ms-animation-delay: 4s; 
 	animation-delay: 4s; 
-	color: #6b739d;	
+	color: #0097e6;	
 }
-.rw-words-1 span:nth-child(4) { 
+.rw-words-1 .word-span:nth-child(4) { 
     -webkit-animation-delay: 6s; 
 	-ms-animation-delay: 6s; 
 	animation-delay: 6s; 
-	color: #7a6b9d;
+	color: #ff7675;
 }
-.rw-words-1 span:nth-child(5) { 
+.rw-words-1 .word-span:nth-child(5) { 
     -webkit-animation-delay: 8s; 
 	-ms-animation-delay: 8s; 
 	animation-delay: 8s; 
-	color: #8d6b9d;
+	color: #a29bfe;
 }
-/* .rw-words-1 span:nth-child(6) { 
-    -webkit-animation-delay: 15s; 
-	-ms-animation-delay: 15s; 
-	animation-delay: 15s; 
-	color: #9b6b9d;
-} */
+
 @-webkit-keyframes rotateWord {
     0% { opacity: 0; }
     2% { opacity: 0; -webkit-transform: translateY(-30px); }
