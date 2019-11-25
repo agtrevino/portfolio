@@ -84,6 +84,8 @@ body {
   scroll-behavior: smooth !important;
 }
 
+
+
 .home-two-container {
     background: #fff !important;
     min-height: 100vh;
@@ -133,6 +135,11 @@ body {
 
   .nav-link-container:hover .nav-circle {
     background: #fff;
+    transition: 400ms;
+  }
+
+  .nav-link-container:hover .nav-circle-black {
+    background: #505464;
     transition: 400ms;
   }
 
@@ -193,12 +200,13 @@ body {
     background: red;
   }
   
-  /* Sets the actual background images to adorable kitties. This part is crucial. */
+  
   .bg1::after {
-    background-image: linear-gradient(to left, rgba(0, 0, 0, .7)  , rgba(0, 0, 0, .85)), url("../../assets/img/background/graffiti-fence-1.jpg");
+    background-image: linear-gradient(to right,rgba(80, 84, 100, .97)  , rgba(80, 84, 100, .97)), url("../../assets/img/background/graffiti-2.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    transition: 2500ms;
   }
 
   .bg2::after {
@@ -222,6 +230,12 @@ body {
     /* text-shadow: 0 0 5px #fff; */
   }
 
+  .lets-title {
+    font-family: 'ralewayExtraBold';
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    color: #fff;
+  }
   .resume-content {
     width: 100%;
     padding: 4% 210px;
@@ -245,15 +259,15 @@ body {
 
   .vertical-text-2 {
     z-index: 20;
-    color: #eb3b5a;
+    color: #fff;
     position: fixed;
     top: 43%;
-    font-size: 15px;
+    font-size: 16px;
     left: 10px;
     letter-spacing: 5px;
     transform: rotate(180deg);
     writing-mode: vertical-lr;
-    font-weight: 900;
+    /* font-weight: 900; */
     transition: 400ms;
    }
 
@@ -276,6 +290,7 @@ body {
     top: 30vh;
     background: transparent;
     width: 100%;
+    z-index: -99;
    }
 
   .active-nav {
@@ -318,7 +333,7 @@ body {
   }
 
   .resume-img {
-    width: 95%;
+    width: 90%;
     box-shadow: 13px 13px 5px -12px #505464;
   }
 
@@ -351,13 +366,17 @@ body {
 
   .quote-author {
     color: #fff;
-    letter-spacing: 2px;
+    letter-spacing: -1px;
     font-weight: 700;
-    font-family: 'trumpGothicEast';
+    font-family: 'ralewayBold';
   }
 
   .project-two-container-two {
     background: #4D8DCA;
+  }
+
+  .contact-two-container {
+    background: #505464;
   }
 
   .chevron {
@@ -415,6 +434,7 @@ header .overlay {
 }
 
 .header-1 {
+  text-align: left;
   font-family: 'ralewayExtraBold', sans-serif;
   font-size: 64px;
   font-style: normal;
@@ -470,6 +490,31 @@ header .overlay {
     color: #FFFFFF;
     border-right: 6px solid #eb3b5a;
     padding-right: 24px;
+  }
+
+  .arrow-down {
+    position: relative;
+    left: 63px;
+  }
+
+  .arrow-down-2 {
+    position: relative;
+    z-index: 999999999;
+    left: 18px;
+  }
+
+  .signature {
+    opacity: 1;
+    width: 200px;  
+    position: absolute; 
+    right: 35px; 
+    bottom: 10px;
+    transition: 300ms;
+  }
+
+  .signature-fade {
+    opacity: 0 !important;
+    transition: 400ms;
   }
 
   /* Animation */
@@ -533,6 +578,91 @@ header .overlay {
   transform: translateX(-50%) translateY(-50%);
 }
 
+.rw-wrapper{
+	width: 80%;
+	position: relative;
+	margin: 110px auto 0 auto;
+	font-family: 'Bree Serif';
+	padding: 10px;
+}
+.rw-sentence{
+	margin: 0;
+	text-align: left;
+	text-shadow: 1px 1px 1px rgba(255,255,255,0.8);
+}
+.rw-sentence .word-span{
+	color: #444;
+	font-size: 200%;
+	font-weight: normal;
+}
+.rw-words{
+	display: inline;
+	text-indent: 10px;
+}
+.rw-words-1 .word-span{
+  font-family: 'ralewayExtraBold';
+  letter-spacing: -1px;
+	position: absolute;
+  opacity: 0;
+  top: 43px;
+	/* overflow: hidden; */
+	color: #1dd1a1;
+	-webkit-animation: rotateWord 10s linear infinite 0s;
+	-ms-animation: rotateWord 10s linear infinite 0s;
+	animation: rotateWord 10s linear infinite 0s;
+}
+.rw-words-1 .word-span:nth-child(2) { 
+    -webkit-animation-delay: 2s; 
+	-ms-animation-delay: 2s; 
+	animation-delay: 2s; 
+	color: #fad390;
+}
+.rw-words-1 .word-span:nth-child(3) { 
+    -webkit-animation-delay: 4s; 
+	-ms-animation-delay: 4s; 
+	animation-delay: 4s; 
+	color: #0097e6;	
+}
+.rw-words-1 .word-span:nth-child(4) { 
+    -webkit-animation-delay: 6s; 
+	-ms-animation-delay: 6s; 
+	animation-delay: 6s; 
+	color: #ff7675;
+}
+.rw-words-1 .word-span:nth-child(5) { 
+    -webkit-animation-delay: 8s; 
+	-ms-animation-delay: 8s; 
+	animation-delay: 8s; 
+	color: #a29bfe;
+}
+
+@-webkit-keyframes rotateWord {
+    0% { opacity: 0; }
+    2% { opacity: 0; -webkit-transform: translateY(-30px); }
+	5% { opacity: 1; -webkit-transform: translateY(0px);}
+    17% { opacity: 1; -webkit-transform: translateY(0px); }
+	20% { opacity: 0; -webkit-transform: translateY(30px); }
+	80% { opacity: 0; }
+    100% { opacity: 0; }
+}
+@-ms-keyframes rotateWord {
+    0% { opacity: 0; }
+    2% { opacity: 0; -ms-transform: translateY(-30px); }
+	5% { opacity: 1; -ms-transform: translateY(0px);}
+    17% { opacity: 1; -ms-transform: translateY(0px); }
+	20% { opacity: 0; -ms-transform: translateY(30px); }
+	80% { opacity: 0; }
+    100% { opacity: 0; }
+}
+@keyframes rotateWord {
+    0% { opacity: 0; }
+    2% { opacity: 0; -webkit-transform: translateY(-30px); transform: translateY(-30px); }
+	5% { opacity: 1; -webkit-transform: translateY(0px); transform: translateY(0px);}
+    17% { opacity: 1; -webkit-transform: translateY(0px); transform: translateY(0px); }
+	20% { opacity: 0; -webkit-transform: translateY(30px); transform: translateY(30px); }
+	80% { opacity: 0; }
+    100% { opacity: 0; }
+}
 
 @media only screen and (max-width: 680px) {
 
@@ -627,5 +757,21 @@ header .overlay {
     font-family: 'ralewaySemi';
   }
 
+  .rw-words {
+    text-indent: 0px;
+}
+
+.arrow-down {
+  position: relative;
+  left: 63px;
+  opacity: 0;
+}
+
+.arrow-down-2 {
+  position: relative;
+  z-index: 999999999;
+  left: 18px;
+  opacity: 0;
+}
 
 }

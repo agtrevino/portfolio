@@ -11,8 +11,9 @@ export class HomeTwoComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    $('.home-nav').addClass("active-nav");
-    $('.home-circle').addClass("active-circle");
+    // $('.home-nav').addClass("active-nav");
+    // $('.home-circle').addClass("active-circle");
+    this.navAnim();
     this.navViewCheck();
     this.resumeTitleViewCheck();
   }
@@ -34,14 +35,16 @@ export class HomeTwoComponent implements OnInit {
           $('.vertical-text-2').removeClass("color-black");
           $('.resume-circle').removeClass("active-circle-black");
           $('.resume-nav').removeClass("active-nav");
-          
-        } 
+          $('.resume-circle').removeClass("nav-circle-black");
+
+        }
       });
       $(".resume-two-viewport").each(function () {
         var offset = $(this).offset();
         if (scrollTop <= offset.top && ($(this).height() + offset.top) < (scrollTop + windowHeight)) {
           $('.resume-nav').addClass("active-nav");
           $('.resume-circle').addClass("active-circle-black");
+          $('.resume-circle').addClass("nav-circle-black");
           $('.vertical-text-2').addClass("color-black");
           $('.nav-link-text').addClass("color-black");
           $('.line').addClass("line-black");
@@ -50,8 +53,8 @@ export class HomeTwoComponent implements OnInit {
           $('.projects-nav').removeClass("active-nav");
           $('.home-circle').removeClass("active-circle");
           $('.home-nav').removeClass("active-nav");
-          
-        } 
+
+        }
       });
       $(".projects-two-viewport").each(function () {
         var offset = $(this).offset();
@@ -64,10 +67,11 @@ export class HomeTwoComponent implements OnInit {
           $('.vertical-text-2').removeClass("color-black");
           $('.resume-circle').removeClass("active-circle-black");
           $('.resume-nav').removeClass("active-nav");
-          
+          $('.resume-circle').removeClass("nav-circle-black");
+
         } else {
 
-          
+
         }
       });
       $(".project-two-viewport-two").each(function () {
@@ -77,10 +81,10 @@ export class HomeTwoComponent implements OnInit {
           $('.projects-circle').addClass("active-circle");
           $('.resume-circle').removeClass("active-circle-black");
           $('.resume-nav').removeClass("active-nav");
-          
+
         } else {
 
-          
+
         }
       });
       $(".contact-two-viewport").each(function () {
@@ -90,11 +94,23 @@ export class HomeTwoComponent implements OnInit {
           $('.contact-circle').addClass("active-circle");
           $('.projects-circle').removeClass("active-circle");
           $('.projects-nav').removeClass("active-nav");
-          
+
         } else {
           $('.contact-circle').removeClass("active-circle");
           $('.contact-nav').removeClass("active-nav");
-          
+
+        }
+      });
+      $(".signature").each(function () {
+        var offset = $(this).offset();
+        if (scrollTop <= offset.top && ($(this).height() + offset.top) < (scrollTop + windowHeight)) {
+          $('.signature').attr('src', '');
+          $('.signature').attr('src', '../assets/img/signature/aaron_sig.gif');
+          $('.signature').removeClass('signature-fade');
+          console.log("yeet")
+        } else {
+          console.log("nope")
+          $('.signature').addClass('signature-fade');
         }
       });
     });
@@ -107,29 +123,17 @@ export class HomeTwoComponent implements OnInit {
       $(".creative-title").each(function () {
         var offset = $(this).offset();
         if (scrollTop <= offset.top && ($(this).height() + offset.top) < (scrollTop + windowHeight)) {
-          $('.creative-row').addClass("fadeInUp");
-
-        } else {
+          setTimeout(function () {
+            $('.creative-row').addClass("fadeInUp");
+            setTimeout(function () {
+              $('.detail-row').addClass("fadeInUp");
+              setTimeout(function () {
+                $('.team-row').addClass("fadeInUp");
+              }, 300)
+            }, 300)
+          }, 300)
         }
-      });
-      $(".detail-title").each(function () {
-        var offset = $(this).offset();
-        if (scrollTop <= offset.top && ($(this).height() + offset.top) < (scrollTop + windowHeight)) {
-          $('.detail-row').addClass("fadeInUp");
-
-        } else {
-
-        }
-      });
-      $(".team-title").each(function () {
-        var offset = $(this).offset();
-        if (scrollTop <= offset.top && ($(this).height() + offset.top) < (scrollTop + windowHeight)) {
-          $('.team-row').addClass("fadeInUp");
-
-        } else {
-
-        }
-      });
+      })
       $(".jstorm-title").each(function () {
         var offset = $(this).offset();
         if (scrollTop <= offset.top && ($(this).height() + offset.top) < (scrollTop + windowHeight)) {
@@ -143,14 +147,36 @@ export class HomeTwoComponent implements OnInit {
         if (scrollTop <= offset.top && ($(this).height() + offset.top) < (scrollTop + windowHeight)) {
           $('.jstorm-title-2').addClass("fadeInUp");
           $('.vertical-text-2').addClass("color-white");
-          setTimeout(function(){
-            $('.jstorm-text').addClass("fadeInUp"); 
+          setTimeout(function () {
+            $('.jstorm-text').addClass("fadeInUp");
           }, 300);
         } else {
           $('.vertical-text-2').removeClass("color-white");
         }
       });
+
     });
+  };
+
+  navAnim() {
+    setTimeout(function () {
+      $('#home-nav').addClass("fadeInUp");
+      setTimeout(function () {
+        $('#resume-nav').addClass("fadeInUp");
+        setTimeout(function () {
+          $('#projects-nav').addClass("fadeInUp");
+          setTimeout(function () {
+            $('#contact-nav').addClass("fadeInUp");
+            setTimeout(function () {
+              $('.home-circle').addClass("active-circle");
+              setTimeout(function () {
+                $('.home-nav').addClass("active-nav");     
+              }, 300)
+            }, 300)
+          }, 300)
+        }, 300)
+      }, 300)
+    }, 600)
   }
 }
 
