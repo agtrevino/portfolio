@@ -202,7 +202,7 @@ body {
   
   
   .bg1::after {
-    background-image: linear-gradient(to right,rgba(80, 84, 100, .97)  , rgba(80, 84, 100, .97)), url("../../assets/img/background/graffiti-2.jpg");
+    background-image: linear-gradient(to right,rgba(0, 0, 0, .42)  , rgba(0, 0, 0, .42)), url("../../assets/img/background/graffiti-4.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
