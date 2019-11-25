@@ -517,6 +517,29 @@ header .overlay {
     transition: 400ms;
   }
 
+  /* width */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #505464;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgba(0,0,0, 0.4);
+  transition: 300ms ease-in-out;
+  border-radius: 35px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0,0,0, 0.8);
+  transition: 300ms ease-in-out;
+}
+
   /* Animation */
 
 @keyframes fadeInUp {
