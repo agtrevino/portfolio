@@ -54,7 +54,6 @@ export class HomeTwoComponent implements OnInit {
 
         }
       });
-
       $(".projects-two-viewport").each(function () {
         var offset = $(this).offset();
         if (scrollTop <= offset.top && ($(this).height() + offset.top) < (scrollTop + windowHeight)) {
@@ -99,6 +98,18 @@ export class HomeTwoComponent implements OnInit {
 
         }
       });
+      $(".signature").each(function () {
+        var offset = $(this).offset();
+        if (scrollTop <= offset.top && ($(this).height() + offset.top) < (scrollTop + windowHeight)) {
+          $('.signature').attr('src', '');
+          $('.signature').attr('src', '../assets/img/signature/aaron_sig.gif');
+          $('.signature').removeClass('signature-fade');
+          console.log("yeet")
+        } else {
+          console.log("nope")
+          $('.signature').addClass('signature-fade');
+        }
+      });
     });
   }
 
@@ -120,7 +131,6 @@ export class HomeTwoComponent implements OnInit {
           }, 300)
         }
       })
-
       $(".jstorm-title").each(function () {
         var offset = $(this).offset();
         if (scrollTop <= offset.top && ($(this).height() + offset.top) < (scrollTop + windowHeight)) {
@@ -141,6 +151,7 @@ export class HomeTwoComponent implements OnInit {
           $('.vertical-text-2').removeClass("color-white");
         }
       });
+
     });
   };
 
@@ -154,26 +165,15 @@ export class HomeTwoComponent implements OnInit {
           setTimeout(function () {
             $('#contact-nav').addClass("fadeInUp");
             setTimeout(function () {
-              
               $('.home-circle').addClass("active-circle");
               setTimeout(function () {
-                $('.home-nav').addClass("active-nav");
+                $('.home-nav').addClass("active-nav");     
               }, 300)
             }, 300)
           }, 300)
         }, 300)
       }, 300)
-    }, 300)
-
-
-
-
-
-
-
-
-
-
+    }, 600)
   }
 }
 
