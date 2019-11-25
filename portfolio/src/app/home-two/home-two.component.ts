@@ -35,6 +35,7 @@ export class HomeTwoComponent implements OnInit {
           $('.vertical-text-2').removeClass("color-black");
           $('.resume-circle').removeClass("active-circle-black");
           $('.resume-nav').removeClass("active-nav");
+          $('.resume-circle').removeClass("nav-circle-black");
 
         }
       });
@@ -43,6 +44,7 @@ export class HomeTwoComponent implements OnInit {
         if (scrollTop <= offset.top && ($(this).height() + offset.top) < (scrollTop + windowHeight)) {
           $('.resume-nav').addClass("active-nav");
           $('.resume-circle').addClass("active-circle-black");
+          $('.resume-circle').addClass("nav-circle-black");
           $('.vertical-text-2').addClass("color-black");
           $('.nav-link-text').addClass("color-black");
           $('.line').addClass("line-black");
@@ -65,6 +67,7 @@ export class HomeTwoComponent implements OnInit {
           $('.vertical-text-2').removeClass("color-black");
           $('.resume-circle').removeClass("active-circle-black");
           $('.resume-nav').removeClass("active-nav");
+          $('.resume-circle').removeClass("nav-circle-black");
 
         } else {
 

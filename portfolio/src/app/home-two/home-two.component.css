@@ -138,6 +138,11 @@ body {
     transition: 400ms;
   }
 
+  .nav-link-container:hover .nav-circle-black {
+    background: #505464;
+    transition: 400ms;
+  }
+
   .nav-link-container:hover .nav-link-text,
   .nav-link-container:hover .line {
       text-decoration: none !important;
@@ -754,6 +759,19 @@ header .overlay {
 
   .rw-words {
     text-indent: 0px;
+}
+
+.arrow-down {
+  position: relative;
+  left: 63px;
+  opacity: 0;
+}
+
+.arrow-down-2 {
+  position: relative;
+  z-index: 999999999;
+  left: 18px;
+  opacity: 0;
 }
 
 }
