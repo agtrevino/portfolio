@@ -210,7 +210,7 @@ body {
   }
 
   .bg2::after {
-    background-image: linear-gradient(to right, rgba(0, 0, 0, .6)  , rgba(0, 0, 0, .75)), url("../../assets/img/background/headphones-1-bw.jpg");
+    background-image: linear-gradient(to right, rgba(0, 0, 0, .22)  , rgba(0, 0, 0, .42)), url("../../assets/img/background/karl-chor-UvWlksgZGPE-unsplash.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
