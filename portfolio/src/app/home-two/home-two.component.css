@@ -272,11 +272,11 @@ body {
    }
 
    .personal-logo-1 {
-    width: 70px;
+    height: 180px;
     z-index: 20;
     position: absolute;
-    top: 10px;
-    right: 30px;
+    top: -35px;
+    left: -82px;
   }
 
 
@@ -712,14 +712,6 @@ header .overlay {
     display: none;
   }
 
-  .personal-logo-1 {
-    display: none;
-    width: 70px;
-    z-index: 20;
-    position: absolute;
-    top: 10px;
-    right: 30px;
-  }
 
   .resume-content {
     width: 100%;
