@@ -202,7 +202,7 @@ body {
   
   
   .bg1::after {
-    background-image: linear-gradient(to right,rgba(80, 84, 100, .97)  , rgba(80, 84, 100, .97)), url("../../assets/img/background/graffiti-2.jpg");
+    background-image: linear-gradient(to right,rgba(0, 0, 0, .42)  , rgba(0, 0, 0, .42)), url("../../assets/img/background/graffiti-4.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -516,6 +516,29 @@ header .overlay {
     opacity: 0 !important;
     transition: 400ms;
   }
+
+  /* width */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #505464;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgba(0,0,0, 0.4);
+  transition: 300ms ease-in-out;
+  border-radius: 35px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0,0,0, 0.8);
+  transition: 300ms ease-in-out;
+}
 
   /* Animation */
 
