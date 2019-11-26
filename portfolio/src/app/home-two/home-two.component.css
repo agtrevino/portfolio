@@ -271,12 +271,12 @@ body {
     transition: 400ms;
    }
 
-   .personal-logo-1 {
-    height: 180px;
+   .contact-icon-top {
+    height: 32px;
     z-index: 20;
     position: absolute;
-    top: -35px;
-    left: -82px;
+    top: 20px;
+    right: 32px;
   }
 
 
