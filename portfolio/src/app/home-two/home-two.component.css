@@ -527,7 +527,7 @@ header .overlay {
   .intro-word-highlight {
     font-family: 'ralewayExtraBold';
     color: #F1536F;
-    font-size: 32px;
+    font-size: 44px;
     letter-spacing: 1px;
 
     -webkit-text-fill-color: transparent; /* Will override color (regardless of order) */
@@ -536,7 +536,8 @@ header .overlay {
   }
 
   .dd-text {
-    font-size: 20px;
+    font-size: 26px;
+    line-height: 34px;
     /* font-family: 'ralewaySemi'; */
     color: #fff;
   }
