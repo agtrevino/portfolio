@@ -216,6 +216,13 @@ body {
     background-size: cover;
   }
 
+  .bg3::after {
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0)  , rgba(0, 0, 0, 0)), url("../../assets/img/background/DesignDevelop.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
   .resume-two-container {
     background-image: linear-gradient(to right, rgba(255, 255, 255, 1)  , rgba(255, 255, 255, 1)), url("../../assets/img/background/headphones-1-bw.jpg");
     background-position: center;
@@ -517,6 +524,23 @@ header .overlay {
     transition: 400ms;
   }
 
+  .intro-word-highlight {
+    font-family: 'ralewayExtraBold';
+    color: #F1536F;
+    font-size: 32px;
+    letter-spacing: 1px;
+
+    -webkit-text-fill-color: transparent; /* Will override color (regardless of order) */
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #fff;
+  }
+
+  .dd-text {
+    font-size: 20px;
+    /* font-family: 'ralewaySemi'; */
+    color: #fff;
+  }
+
   /* width */
 ::-webkit-scrollbar {
   width: 8px;
@@ -638,19 +662,19 @@ header .overlay {
     -webkit-animation-delay: 2s; 
 	-ms-animation-delay: 2s; 
 	animation-delay: 2s; 
-	color: #fad390;
+	color: #f6e58d;
 }
 .rw-words-1 .word-span:nth-child(3) { 
     -webkit-animation-delay: 4s; 
 	-ms-animation-delay: 4s; 
 	animation-delay: 4s; 
-	color: #0097e6;	
+	color: #48dbfb;	
 }
 .rw-words-1 .word-span:nth-child(4) { 
     -webkit-animation-delay: 6s; 
 	-ms-animation-delay: 6s; 
 	animation-delay: 6s; 
-	color: #ff7675;
+	color: #f3a683;
 }
 .rw-words-1 .word-span:nth-child(5) { 
     -webkit-animation-delay: 8s; 
@@ -658,6 +682,35 @@ header .overlay {
 	animation-delay: 8s; 
 	color: #a29bfe;
 }
+
+
+@supports (display: grid) {
+  body {
+    display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 0.625rem;
+  grid-template-areas: ". main main ." ". main main .";
+  }
+  
+  #container {
+    grid-area: main;
+    align-self: center;
+    justify-self: center;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 @-webkit-keyframes rotateWord {
     0% { opacity: 0; }

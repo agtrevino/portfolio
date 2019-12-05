@@ -11,8 +11,6 @@ export class HomeTwoComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    // $('.home-nav').addClass("active-nav");
-    // $('.home-circle').addClass("active-circle");
     this.navAnim();
     this.navViewCheck();
     this.resumeTitleViewCheck();
@@ -36,7 +34,6 @@ export class HomeTwoComponent implements OnInit {
           $('.resume-circle').removeClass("active-circle-black");
           $('.resume-nav').removeClass("active-nav");
           $('.resume-circle').removeClass("nav-circle-black");
-
         }
       });
       $(".resume-two-viewport").each(function () {
@@ -68,10 +65,6 @@ export class HomeTwoComponent implements OnInit {
           $('.resume-circle').removeClass("active-circle-black");
           $('.resume-nav').removeClass("active-nav");
           $('.resume-circle').removeClass("nav-circle-black");
-
-        } else {
-
-
         }
       });
       $(".project-two-viewport-two").each(function () {
@@ -81,9 +74,6 @@ export class HomeTwoComponent implements OnInit {
           $('.projects-circle').addClass("active-circle");
           $('.resume-circle').removeClass("active-circle-black");
           $('.resume-nav').removeClass("active-nav");
-
-        } else {
-
 
         }
       });
@@ -170,7 +160,7 @@ export class HomeTwoComponent implements OnInit {
             setTimeout(function () {
               $('.home-circle').addClass("active-circle");
               setTimeout(function () {
-                $('.home-nav').addClass("active-nav");     
+                $('.home-nav').addClass("active-nav");
               }, 300)
             }, 300)
           }, 300)
