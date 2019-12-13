@@ -4,7 +4,7 @@ import $ from "jquery";
 @Component({
   selector: 'app-home-two',
   templateUrl: './home-two.component.html',
-  styleUrls: ['./home-two.component.css']
+  styleUrls: ['./home-two.component.scss']
 })
 export class HomeTwoComponent implements OnInit {
 
