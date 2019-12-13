@@ -245,7 +245,7 @@ body {
   }
   .resume-content {
     width: 100%;
-    padding: 4% 200px 0;
+    padding: 4% 200px;
   }
 
   .projects-title {
@@ -354,6 +354,7 @@ body {
   }
   
   .resume-svg {
+    fill: #eb3b5a !important;
     width: 33px !important;
     margin-right: 5px;
     padding-bottom: 0px;
