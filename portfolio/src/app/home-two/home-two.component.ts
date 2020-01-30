@@ -54,6 +54,8 @@ export class HomeTwoComponent implements OnInit {
           $('.home-nav').removeClass("active-nav");
           $('.sub-menu-container').removeClass("expanded");
           $('.projects-sub-nav-1').removeClass("active-nav");
+          $('.projects-sub-nav-2').removeClass("active-nav");
+          $('.projects-sub-nav-3').removeClass("active-nav");
         }
       });
       $(".projects-two-viewport").each(function () {
@@ -62,9 +64,16 @@ export class HomeTwoComponent implements OnInit {
           $('.projects-nav').addClass("active-nav");
           $('.projects-circle').addClass("active-circle");
           $('.sub-menu-container').addClass("expanded");
+
           setTimeout(function () {
             $('.projects-sub-nav-1').addClass("active-nav");
-          }, 200)
+            setTimeout(function () {
+              $('.projects-sub-nav-2').addClass("active-nav");
+              setTimeout(function () {
+                $('.projects-sub-nav-3').addClass("active-nav");
+              }, 150)
+            }, 150)
+          }, 150)
           
 
           $('.nav-link-text').removeClass("color-black");
@@ -74,6 +83,8 @@ export class HomeTwoComponent implements OnInit {
           $('.resume-circle').removeClass("active-circle-black");
           $('.resume-nav').removeClass("active-nav");
           $('.resume-circle').removeClass("nav-circle-black");
+          $('.home-circle').removeClass("active-circle");
+          $('.home-nav').removeClass("active-nav");
           
         }
       });
@@ -84,7 +95,10 @@ export class HomeTwoComponent implements OnInit {
           $('.projects-circle').addClass("active-circle");
           $('.resume-circle').removeClass("active-circle-black");
           $('.resume-nav').removeClass("active-nav");
+          $('.home-circle').removeClass("active-circle");
+          $('.home-nav').removeClass("active-nav");
           $('.sub-menu-container').removeClass("expanded");
+
         }
       });
       $(".contact-two-viewport").each(function () {
@@ -93,7 +107,12 @@ export class HomeTwoComponent implements OnInit {
           $('.contact-nav').addClass("active-nav");
           $('.contact-circle').addClass("active-circle");
           $('.projects-circle').removeClass("active-circle");
+          $('.sub-menu-container').removeClass("expanded");
           $('.projects-nav').removeClass("active-nav");
+          $('.projects-sub-nav-1').removeClass("active-nav");
+          $('.projects-sub-nav-2').removeClass("active-nav");
+          $('.home-circle').removeClass("active-circle");
+          $('.home-nav').removeClass("active-nav");
 
         } else {
           $('.contact-circle').removeClass("active-circle");

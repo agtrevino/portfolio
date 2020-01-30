@@ -110,7 +110,7 @@ body {
   }
 
   .expanded {
-    height: 50px;
+    height: calc(31.3333px * 3);
     transition: 500ms ease-in-out;
   }
   
@@ -123,12 +123,12 @@ body {
 
   .sub-nav-line {
     margin-right: 25px;
-    min-width: 16% !important;
+    min-width: 3% !important;
     transition: 300ms ease-in-out;
   }
 
   .nav-sub-link-container:hover .sub-nav-line{
-    min-width: 30% !important;
+    min-width: 11% !important;
     transition: 300ms ease-in-out;
   }
 
