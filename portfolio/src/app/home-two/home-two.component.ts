@@ -36,6 +36,10 @@ export class HomeTwoComponent implements OnInit {
           $('.resume-circle').removeClass("active-circle-black");
           $('.resume-nav').removeClass("active-nav");
           $('.resume-circle').removeClass("nav-circle-black");
+          $('.sub-menu-container').removeClass("expanded");
+          $('.projects-sub-nav-1').removeClass("active-nav");
+          $('.projects-sub-nav-2').removeClass("active-nav");
+          $('.projects-sub-nav-3').removeClass("active-nav");
         }
       });
       $(".resume-two-viewport").each(function () {
@@ -126,6 +130,10 @@ export class HomeTwoComponent implements OnInit {
           $('.signature').attr('src', '');
           $('.signature').attr('src', '../assets/img/signature/aaron_sig.gif');
           $('.signature').removeClass('signature-fade');
+          $('.sub-menu-container').removeClass("expanded");
+          $('.projects-sub-nav-1').removeClass("active-nav");
+          $('.projects-sub-nav-2').removeClass("active-nav");
+          $('.projects-sub-nav-3').removeClass("active-nav");
         } else {
           $('.signature').addClass('signature-fade');
         }

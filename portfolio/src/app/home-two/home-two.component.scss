@@ -124,12 +124,12 @@ body {
   .sub-nav-line {
     margin-right: 25px;
     min-width: 3% !important;
-    transition: 300ms ease-in-out;
+    transition: 200ms ease-in-out;
   }
 
   .nav-sub-link-container:hover .sub-nav-line{
     min-width: 11% !important;
-    transition: 300ms ease-in-out;
+    transition: 200ms ease-in-out;
   }
 
   .nav-link-text {
