@@ -103,12 +103,33 @@ body {
     background-color: transparent;
     text-decoration: none !important;
   }
+
+  .sub-menu-container {
+    height: 0px;
+    transition: 500ms ease-in-out;
+  }
+
+  .expanded {
+    height: 50px;
+    transition: 500ms ease-in-out;
+  }
   
   .line {
       padding-top: 13px;
       border-bottom: 1px solid #fff;
       opacity: 0;
       transition: 400ms;
+  }
+
+  .sub-nav-line {
+    margin-right: 25px;
+    min-width: 16% !important;
+    transition: 300ms ease-in-out;
+  }
+
+  .nav-sub-link-container:hover .sub-nav-line{
+    min-width: 30% !important;
+    transition: 300ms ease-in-out;
   }
 
   .nav-link-text {

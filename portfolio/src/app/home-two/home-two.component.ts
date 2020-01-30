@@ -10,6 +10,8 @@ export class HomeTwoComponent implements OnInit {
 
   constructor() { }
 
+  isProject = false;
+
   ngOnInit() {
     this.navAnim();
     this.navViewCheck();
@@ -50,7 +52,8 @@ export class HomeTwoComponent implements OnInit {
           $('.projects-nav').removeClass("active-nav");
           $('.home-circle').removeClass("active-circle");
           $('.home-nav').removeClass("active-nav");
-
+          $('.sub-menu-container').removeClass("expanded");
+          $('.projects-sub-nav-1').removeClass("active-nav");
         }
       });
       $(".projects-two-viewport").each(function () {
@@ -58,6 +61,12 @@ export class HomeTwoComponent implements OnInit {
         if (scrollTop <= offset.top && ($(this).height() + offset.top) < (scrollTop + windowHeight)) {
           $('.projects-nav').addClass("active-nav");
           $('.projects-circle').addClass("active-circle");
+          $('.sub-menu-container').addClass("expanded");
+          setTimeout(function () {
+            $('.projects-sub-nav-1').addClass("active-nav");
+          }, 200)
+          
+
           $('.nav-link-text').removeClass("color-black");
           $('.line').removeClass("line-black");
           $('.nav-circle').removeClass("circle-black");
@@ -65,6 +74,7 @@ export class HomeTwoComponent implements OnInit {
           $('.resume-circle').removeClass("active-circle-black");
           $('.resume-nav').removeClass("active-nav");
           $('.resume-circle').removeClass("nav-circle-black");
+          
         }
       });
       $(".project-two-viewport-two").each(function () {
@@ -74,7 +84,7 @@ export class HomeTwoComponent implements OnInit {
           $('.projects-circle').addClass("active-circle");
           $('.resume-circle').removeClass("active-circle-black");
           $('.resume-nav').removeClass("active-nav");
-
+          $('.sub-menu-container').removeClass("expanded");
         }
       });
       $(".contact-two-viewport").each(function () {
@@ -97,9 +107,7 @@ export class HomeTwoComponent implements OnInit {
           $('.signature').attr('src', '');
           $('.signature').attr('src', '../assets/img/signature/aaron_sig.gif');
           $('.signature').removeClass('signature-fade');
-          console.log("yeet")
         } else {
-          console.log("nope")
           $('.signature').addClass('signature-fade');
         }
       });
