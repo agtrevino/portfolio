@@ -84,7 +84,10 @@ body {
   scroll-behavior: smooth !important;
 }
 
-
+.display-none {
+  display: none;
+ 
+}
 
 .home-two-container {
     background: #fff !important;
@@ -104,15 +107,17 @@ body {
     text-decoration: none !important;
   }
 
-  .sub-menu-container {
-    height: 0px;
-    transition: 500ms ease-in-out;
-  }
+  // .sub-menu-container {
+  //   height: calc(31.3333px * 0);
+  //   height: 0;
+  //   transition: 500ms;
+  // }
 
-  .expanded {
-    height: calc(31.3333px * 3);
-    transition: 500ms ease-in-out;
-  }
+  // .expanded {
+  //   height: calc(31.3333px * 3);
+  //   height: auto;
+  //   transition: 500ms;
+  // }
   
   .line {
       padding-top: 13px;

@@ -11,6 +11,7 @@ export class HomeTwoComponent implements OnInit {
   constructor() { }
 
   isProject = false;
+  view: string;
 
   ngOnInit() {
     this.navAnim();
@@ -18,127 +19,186 @@ export class HomeTwoComponent implements OnInit {
     this.resumeTitleViewCheck();
   }
 
+
+  closeSubNav() {
+    setTimeout(function () {
+      $('.projects-sub-nav-3').removeClass("active-nav");
+      setTimeout(function () {
+        $('.projects-sub-nav-2').removeClass("active-nav");
+        setTimeout(function () {
+          $('.projects-sub-nav-1').removeClass("active-nav");
+          setTimeout(function () {
+            $('.sub-container').addClass("display-none");
+          }, 450)
+        }, 150)
+      }, 150)
+    }, 150)
+  }
+
+  openSubNav() {
+    $( ".sub-menu-container" ).slideDown( "slow", function() {
+      // Animation complete.
+    });
+      setTimeout(function () {
+        $('.sub-container').removeClass("display-none");
+        setTimeout(function () {
+          $('.projects-sub-nav-1').addClass("active-nav");
+          setTimeout(function () {
+            $('.projects-sub-nav-2').addClass("active-nav");
+            setTimeout(function () {
+              $('.projects-sub-nav-3').addClass("active-nav");
+            }, 150)
+          }, 150)
+        }, 150)
+      }, 500)
+
+  }
+
+  viewSwitch(view) {
+
+    switch (view) {
+      case 'homeView':
+        this.isHomeView();
+        break;
+      case 'resumeView':
+        this.isResumeView();
+        console.log('resume!');
+        break;
+      case 'projectsView':
+        this.isProjectsView();
+        console.log('projects!');
+        break;
+      case 'contactView':
+        this.isContactView();
+        console.log('contact!');
+        break;
+      default:
+        console.log('Nobody Wins!');
+    }
+  }
+
+  isHomeView() {
+
+    $('.home-nav').addClass("active-nav");
+    $('.home-circle').addClass("active-circle");
+
+    $('.projects-circle').removeClass("active-circle");
+    $('.projects-nav').removeClass("active-nav");
+    $('.nav-link-text').removeClass("color-black");
+    $('.line').removeClass("line-black");
+    $('.nav-circle').removeClass("circle-black");
+    $('.vertical-text-2').removeClass("color-black");
+    $('.resume-circle').removeClass("active-circle-black");
+    $('.resume-nav').removeClass("active-nav");
+    $('.resume-circle').removeClass("nav-circle-black");
+
+    this.closeSubNav();
+  }
+
+  isResumeView() {
+    
+    $('.resume-nav').addClass("active-nav");
+    $('.resume-circle').addClass("active-circle-black");
+    $('.resume-circle').addClass("nav-circle-black");
+    $('.vertical-text-2').addClass("color-black");
+    $('.nav-link-text').addClass("color-black");
+    $('.line').addClass("line-black");
+    $('.nav-circle').addClass("circle-black");
+
+    $('.projects-circle').removeClass("active-circle");
+    $('.projects-nav').removeClass("active-nav");
+    $('.home-circle').removeClass("active-circle");
+    $('.home-nav').removeClass("active-nav");
+
+    this.closeSubNav();
+
+  }
+
+  isProjectsView() {
+    $('.projects-nav').addClass("active-nav");
+    $('.projects-circle').addClass("active-circle");
+
+    $('.nav-link-text').removeClass("color-black");
+    $('.line').removeClass("line-black");
+    $('.nav-circle').removeClass("circle-black");
+    $('.vertical-text-2').removeClass("color-black");
+    $('.resume-circle').removeClass("active-circle-black");
+    $('.resume-nav').removeClass("active-nav");
+    $('.resume-circle').removeClass("nav-circle-black");
+    $('.home-circle').removeClass("active-circle");
+    $('.home-nav').removeClass("active-nav");
+    $('.contact-circle').removeClass("active-circle");
+    $('.contact-nav').removeClass("active-nav");
+
+    this.openSubNav();
+  }
+
+  isContactView() {
+
+    $('.contact-nav').addClass("active-nav");
+    $('.contact-circle').addClass("active-circle");
+
+    $('.projects-circle').removeClass("active-circle");
+    $('.projects-nav').removeClass("active-nav");
+    $('.home-circle').removeClass("active-circle");
+    $('.home-nav').removeClass("active-nav");
+
+    this.closeSubNav();
+    
+  }
+
   navViewCheck() {
+
+    var self = this;
+
     $('.wrapper').scroll(function () {
       var scrollTop = $(window).scrollTop();
       var windowHeight = $(window).height();
+
+
       $(".home-two-viewport").each(function () {
         var offset = $(this).offset();
         if (scrollTop <= offset.top && ($(this).height() + offset.top) < (scrollTop + windowHeight)) {
-          $('.home-nav').addClass("active-nav");
-          $('.home-circle').addClass("active-circle");
-          $('.projects-circle').removeClass("active-circle");
-          $('.projects-nav').removeClass("active-nav");
-          $('.nav-link-text').removeClass("color-black");
-          $('.line').removeClass("line-black");
-          $('.nav-circle').removeClass("circle-black");
-          $('.vertical-text-2').removeClass("color-black");
-          $('.resume-circle').removeClass("active-circle-black");
-          $('.resume-nav').removeClass("active-nav");
-          $('.resume-circle').removeClass("nav-circle-black");
-          $('.sub-menu-container').removeClass("expanded");
-          $('.projects-sub-nav-1').removeClass("active-nav");
-          $('.projects-sub-nav-2').removeClass("active-nav");
-          $('.projects-sub-nav-3').removeClass("active-nav");
+          this.view = 'homeView';
+          self.viewSwitch(this.view);
         }
       });
+
       $(".resume-two-viewport").each(function () {
         var offset = $(this).offset();
         if (scrollTop <= offset.top && ($(this).height() + offset.top) < (scrollTop + windowHeight)) {
-          $('.resume-nav').addClass("active-nav");
-          $('.resume-circle').addClass("active-circle-black");
-          $('.resume-circle').addClass("nav-circle-black");
-          $('.vertical-text-2').addClass("color-black");
-          $('.nav-link-text').addClass("color-black");
-          $('.line').addClass("line-black");
-          $('.nav-circle').addClass("circle-black");
-          $('.projects-circle').removeClass("active-circle");
-          $('.projects-nav').removeClass("active-nav");
-          $('.home-circle').removeClass("active-circle");
-          $('.home-nav').removeClass("active-nav");
-          $('.sub-menu-container').removeClass("expanded");
-          $('.projects-sub-nav-1').removeClass("active-nav");
-          $('.projects-sub-nav-2').removeClass("active-nav");
-          $('.projects-sub-nav-3').removeClass("active-nav");
+          this.view = 'resumeView';
+          self.viewSwitch(this.view);
         }
       });
       $(".projects-two-viewport").each(function () {
         var offset = $(this).offset();
         if (scrollTop <= offset.top && ($(this).height() + offset.top) < (scrollTop + windowHeight)) {
-          $('.projects-nav').addClass("active-nav");
-          $('.projects-circle').addClass("active-circle");
-          $('.sub-menu-container').addClass("expanded");
-
-          setTimeout(function () {
-            $('.projects-sub-nav-1').addClass("active-nav");
-            setTimeout(function () {
-              $('.projects-sub-nav-2').addClass("active-nav");
-              setTimeout(function () {
-                $('.projects-sub-nav-3').addClass("active-nav");
-              }, 150)
-            }, 150)
-          }, 150)
-          
-
-          $('.nav-link-text').removeClass("color-black");
-          $('.line').removeClass("line-black");
-          $('.nav-circle').removeClass("circle-black");
-          $('.vertical-text-2').removeClass("color-black");
-          $('.resume-circle').removeClass("active-circle-black");
-          $('.resume-nav').removeClass("active-nav");
-          $('.resume-circle').removeClass("nav-circle-black");
-          $('.home-circle').removeClass("active-circle");
-          $('.home-nav').removeClass("active-nav");
-          
-        }
-      });
-      $(".project-two-viewport-two").each(function () {
-        var offset = $(this).offset();
-        if (scrollTop <= offset.top && ($(this).height() + offset.top) < (scrollTop + windowHeight)) {
-          $('.projects-nav').addClass("active-nav");
-          $('.projects-circle').addClass("active-circle");
-          $('.resume-circle').removeClass("active-circle-black");
-          $('.resume-nav').removeClass("active-nav");
-          $('.home-circle').removeClass("active-circle");
-          $('.home-nav').removeClass("active-nav");
-          $('.sub-menu-container').removeClass("expanded");
-
+          this.view = 'projectsView';
+          self.viewSwitch(this.view);
         }
       });
       $(".contact-two-viewport").each(function () {
         var offset = $(this).offset();
         if (scrollTop <= offset.top && ($(this).height() + offset.top) < (scrollTop + windowHeight)) {
-          $('.contact-nav').addClass("active-nav");
-          $('.contact-circle').addClass("active-circle");
-          $('.projects-circle').removeClass("active-circle");
-          $('.sub-menu-container').removeClass("expanded");
-          $('.projects-nav').removeClass("active-nav");
-          $('.projects-sub-nav-1').removeClass("active-nav");
-          $('.projects-sub-nav-2').removeClass("active-nav");
-          $('.home-circle').removeClass("active-circle");
-          $('.home-nav').removeClass("active-nav");
-
-        } else {
-          $('.contact-circle').removeClass("active-circle");
-          $('.contact-nav').removeClass("active-nav");
-
+          this.view = 'contactView';
+          self.viewSwitch(this.view);
         }
       });
       $(".signature").each(function () {
         var offset = $(this).offset();
         if (scrollTop <= offset.top && ($(this).height() + offset.top) < (scrollTop + windowHeight)) {
+          this.view = 'contactView';
+          self.viewSwitch(this.view);
           $('.signature').attr('src', '');
           $('.signature').attr('src', '../assets/img/signature/aaron_sig.gif');
           $('.signature').removeClass('signature-fade');
-          $('.sub-menu-container').removeClass("expanded");
-          $('.projects-sub-nav-1').removeClass("active-nav");
-          $('.projects-sub-nav-2').removeClass("active-nav");
-          $('.projects-sub-nav-3').removeClass("active-nav");
         } else {
           $('.signature').addClass('signature-fade');
         }
       });
     });
+
   }
 
   resumeTitleViewCheck() {
@@ -181,9 +241,9 @@ export class HomeTwoComponent implements OnInit {
       });
 
     });
-  };
+  }
 
-  navAnim() {
+  navAnim() { 
     setTimeout(function () {
       $('#home-nav').addClass("fadeInUp");
       setTimeout(function () {
