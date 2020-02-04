@@ -75,6 +75,8 @@ export class HomeTwoComponent implements OnInit {
     $('.home-nav').addClass("active-nav");
     $('.home-circle').addClass("active-circle");
 
+    $('.projects-sub-nav-3').removeClass("active-nav");
+
     $('.projects-circle').removeClass("active-circle");
     $('.projects-nav').removeClass("active-nav");
     $('.nav-link-text').removeClass("color-black");
@@ -90,6 +92,8 @@ export class HomeTwoComponent implements OnInit {
 
   isResumeView() {
     this.closeSubNav();
+    $('.projects-sub-nav-3').removeClass("active-nav");
+
     $('.resume-nav').addClass("active-nav");
     $('.resume-circle').addClass("active-circle-black");
     $('.resume-circle').addClass("nav-circle-black");
@@ -132,6 +136,7 @@ export class HomeTwoComponent implements OnInit {
   isContactView() {
 
     this.closeSubNav();
+    $('.projects-sub-nav-3').removeClass("active-nav");
 
     $('.contact-nav').addClass("active-nav");
     $('.contact-circle').addClass("active-circle");
