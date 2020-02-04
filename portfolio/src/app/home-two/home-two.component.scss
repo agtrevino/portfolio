@@ -107,17 +107,15 @@ body {
     text-decoration: none !important;
   }
 
-  // .sub-menu-container {
-  //   height: calc(31.3333px * 0);
-  //   height: 0;
-  //   transition: 500ms;
-  // }
+  .sub-menu-container {
+    height: calc(31.3333px * 0);
+    transition: 500ms;
+  }
 
-  // .expanded {
-  //   height: calc(31.3333px * 3);
-  //   height: auto;
-  //   transition: 500ms;
-  // }
+  .expanded {
+    height: calc(31.3333px * 3);
+    transition: 500ms;
+  }
   
   .line {
       padding-top: 13px;

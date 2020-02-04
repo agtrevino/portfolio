@@ -15,43 +15,36 @@ export class HomeTwoComponent implements OnInit {
 
   ngOnInit() {
     this.navAnim();
+    // this.viewSwitch();
     this.navViewCheck();
     this.resumeTitleViewCheck();
   }
 
 
   closeSubNav() {
+    $('.sub-menu-container').removeClass("expanded")
     setTimeout(function () {
       $('.projects-sub-nav-3').removeClass("active-nav");
       setTimeout(function () {
         $('.projects-sub-nav-2').removeClass("active-nav");
         setTimeout(function () {
           $('.projects-sub-nav-1').removeClass("active-nav");
-          setTimeout(function () {
-            $('.sub-container').addClass("display-none");
-          }, 450)
         }, 150)
       }, 150)
     }, 150)
   }
 
   openSubNav() {
-    $( ".sub-menu-container" ).slideDown( "slow", function() {
-      // Animation complete.
-    });
+    $('.sub-menu-container').addClass("expanded");
+    setTimeout(function () {
+      $('.projects-sub-nav-1').addClass("active-nav");
       setTimeout(function () {
-        $('.sub-container').removeClass("display-none");
+        $('.projects-sub-nav-2').addClass("active-nav");
         setTimeout(function () {
-          $('.projects-sub-nav-1').addClass("active-nav");
-          setTimeout(function () {
-            $('.projects-sub-nav-2').addClass("active-nav");
-            setTimeout(function () {
-              $('.projects-sub-nav-3').addClass("active-nav");
-            }, 150)
-          }, 150)
+          $('.projects-sub-nav-3').addClass("active-nav");
         }, 150)
-      }, 500)
-
+      }, 150)
+    }, 150)
   }
 
   viewSwitch(view) {
@@ -92,11 +85,11 @@ export class HomeTwoComponent implements OnInit {
     $('.resume-nav').removeClass("active-nav");
     $('.resume-circle').removeClass("nav-circle-black");
 
-    this.closeSubNav();
+
   }
 
   isResumeView() {
-    
+    this.closeSubNav();
     $('.resume-nav').addClass("active-nav");
     $('.resume-circle').addClass("active-circle-black");
     $('.resume-circle').addClass("nav-circle-black");
@@ -110,11 +103,14 @@ export class HomeTwoComponent implements OnInit {
     $('.home-circle').removeClass("active-circle");
     $('.home-nav').removeClass("active-nav");
 
-    this.closeSubNav();
+
 
   }
 
   isProjectsView() {
+
+    this.openSubNav();
+
     $('.projects-nav').addClass("active-nav");
     $('.projects-circle').addClass("active-circle");
 
@@ -130,10 +126,12 @@ export class HomeTwoComponent implements OnInit {
     $('.contact-circle').removeClass("active-circle");
     $('.contact-nav').removeClass("active-nav");
 
-    this.openSubNav();
+
   }
 
   isContactView() {
+
+    this.closeSubNav();
 
     $('.contact-nav').addClass("active-nav");
     $('.contact-circle').addClass("active-circle");
@@ -143,13 +141,14 @@ export class HomeTwoComponent implements OnInit {
     $('.home-circle').removeClass("active-circle");
     $('.home-nav').removeClass("active-nav");
 
-    this.closeSubNav();
-    
+
+
   }
 
   navViewCheck() {
 
     var self = this;
+
 
     $('.wrapper').scroll(function () {
       var scrollTop = $(window).scrollTop();
@@ -190,15 +189,17 @@ export class HomeTwoComponent implements OnInit {
         if (scrollTop <= offset.top && ($(this).height() + offset.top) < (scrollTop + windowHeight)) {
           this.view = 'contactView';
           self.viewSwitch(this.view);
+          self.closeSubNav();
+          $('.projects-sub-nav-3').removeClass("active-nav");
           $('.signature').attr('src', '');
           $('.signature').attr('src', '../assets/img/signature/aaron_sig.gif');
           $('.signature').removeClass('signature-fade');
         } else {
           $('.signature').addClass('signature-fade');
         }
+        
       });
     });
-
   }
 
   resumeTitleViewCheck() {
@@ -243,7 +244,7 @@ export class HomeTwoComponent implements OnInit {
     });
   }
 
-  navAnim() { 
+  navAnim() {
     setTimeout(function () {
       $('#home-nav').addClass("fadeInUp");
       setTimeout(function () {
