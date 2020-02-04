@@ -20,7 +20,6 @@ export class HomeTwoComponent implements OnInit {
     this.resumeTitleViewCheck();
   }
 
-
   closeSubNav() {
     $('.sub-menu-container').removeClass("expanded")
     setTimeout(function () {

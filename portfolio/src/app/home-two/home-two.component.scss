@@ -416,6 +416,10 @@ body {
     background: #4D8DCA;
   }
 
+  .project-two-container-three {
+    background: #C2282D;
+  }
+
   .contact-two-container {
     background: #505464;
   }
@@ -457,6 +461,17 @@ header .overlay {
   width: 100%;
   color: #4D8DCA;
   background-image: linear-gradient(to bottom, rgba(77, 141, 202, .5), 75%, rgba(77, 141, 202, .5));
+  z-index: 1;
+}
+
+header .overlay-codebound {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  color: rgba(194,40,45, 1);
+  background-image: linear-gradient(to bottom, rgba(194,40,45, .5), 75%, rgba(194,40,45, .5));
   z-index: 1;
 }
 
