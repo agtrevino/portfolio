@@ -21,14 +21,12 @@ export class HomeTwoComponent implements OnInit {
   }
 
   closeSubNav() {
-    $('.sub-menu-container').removeClass("expanded")
-    setTimeout(function () {
       $('.projects-sub-nav-3').removeClass("active-nav");
       setTimeout(function () {
         $('.projects-sub-nav-2').removeClass("active-nav");
         setTimeout(function () {
           $('.projects-sub-nav-1').removeClass("active-nav");
-        }, 150)
+          $('.sub-menu-container').removeClass("expanded");
       }, 150)
     }, 150)
   }
@@ -43,7 +41,7 @@ export class HomeTwoComponent implements OnInit {
           $('.projects-sub-nav-3').addClass("active-nav");
         }, 150)
       }, 150)
-    }, 150)
+    }, 250)
   }
 
   viewSwitch(view) {
@@ -67,11 +65,10 @@ export class HomeTwoComponent implements OnInit {
   }
 
   isHomeView() {
+    this.closeSubNav();
 
     $('.home-nav').addClass("active-nav");
     $('.home-circle').addClass("active-circle");
-
-    $('.projects-sub-nav-3').removeClass("active-nav");
 
     $('.projects-circle').removeClass("active-circle");
     $('.projects-nav').removeClass("active-nav");
@@ -202,6 +199,7 @@ export class HomeTwoComponent implements OnInit {
       $(".contact-two-viewport").each(function () {
         var offset = $(this).offset();
         if (scrollTop <= offset.top && ($(this).height() + offset.top) < (scrollTop + windowHeight)) {
+          $('.projects-sub-nav-3').removeClass("active-nav");
           this.view = 'contactView';
           self.viewSwitch(this.view);
           
@@ -211,13 +209,13 @@ export class HomeTwoComponent implements OnInit {
       $(".signature").each(function () {
         var offset = $(this).offset();
         if (scrollTop <= offset.top && ($(this).height() + offset.top) < (scrollTop + windowHeight)) {
+          $('.projects-sub-nav-3').removeClass("active-nav");
           this.view = 'contactView';
           self.viewSwitch(this.view);
           self.closeSubNav();
           $('.signature').attr('src', '');
           $('.signature').attr('src', '../assets/img/signature/aaron_sig.gif');
           $('.signature').removeClass('signature-fade');
-          $('.projects-sub-nav-3').removeClass("active-nav");
         } else {
           $('.signature').addClass('signature-fade');
         }
