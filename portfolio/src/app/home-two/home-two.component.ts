@@ -153,7 +153,6 @@ export class HomeTwoComponent implements OnInit {
 
     var self = this;
 
-
     $('.wrapper').scroll(function () {
       var scrollTop = $(window).scrollTop();
       var windowHeight = $(window).height();
@@ -181,6 +180,28 @@ export class HomeTwoComponent implements OnInit {
           self.viewSwitch(this.view);
         }
       });
+      $(".jstorm-viewport").each(function() {
+        var offset = $(this).offset();
+        if (scrollTop <= offset.top && ($(this).height() + offset.top) < (scrollTop + windowHeight)) {
+          $('.jstorm-line').addClass('line-extend');
+          $('.codebound-line').removeClass('line-extend');
+        } 
+      })
+      $(".projects-main-viewport").each(function() {
+        var offset = $(this).offset();
+        if (scrollTop <= offset.top && ($(this).height() + offset.top) < (scrollTop + windowHeight)) {
+          $('.jstorm-line').removeClass('line-extend');
+          $('.codebound-line').removeClass('line-extend');
+        } 
+      })
+      $(".codebound-viewport").each(function() {
+        var offset = $(this).offset();
+        if (scrollTop <= offset.top && ($(this).height() + offset.top) < (scrollTop + windowHeight)) {
+          $('.codebound-line').addClass('line-extend');
+          $('.jstorm-line').removeClass('line-extend');
+        } 
+      })
+
       $(".contact-two-viewport").each(function () {
         var offset = $(this).offset();
         if (scrollTop <= offset.top && ($(this).height() + offset.top) < (scrollTop + windowHeight)) {
@@ -188,6 +209,7 @@ export class HomeTwoComponent implements OnInit {
           self.viewSwitch(this.view);
         }
       });
+
       $(".signature").each(function () {
         var offset = $(this).offset();
         if (scrollTop <= offset.top && ($(this).height() + offset.top) < (scrollTop + windowHeight)) {

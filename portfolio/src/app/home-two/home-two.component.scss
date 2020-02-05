@@ -135,6 +135,11 @@ body {
     transition: 200ms ease-in-out;
   }
 
+  .line-extend {
+    min-width: 11% !important;
+    transition: 200ms ease-in-out;
+  }
+
   .nav-link-text {
       padding-top: 2px;
       letter-spacing: 3px;
