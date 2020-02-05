@@ -54,18 +54,15 @@ export class HomeTwoComponent implements OnInit {
         break;
       case 'resumeView':
         this.isResumeView();
-        console.log('resume!');
         break;
       case 'projectsView':
         this.isProjectsView();
-        console.log('projects!');
         break;
       case 'contactView':
         this.isContactView();
-        console.log('contact!');
         break;
       default:
-        console.log('Nobody Wins!');
+        console.log('Default!');
     }
   }
 
@@ -207,6 +204,7 @@ export class HomeTwoComponent implements OnInit {
         if (scrollTop <= offset.top && ($(this).height() + offset.top) < (scrollTop + windowHeight)) {
           this.view = 'contactView';
           self.viewSwitch(this.view);
+          
         }
       });
 
@@ -216,10 +214,10 @@ export class HomeTwoComponent implements OnInit {
           this.view = 'contactView';
           self.viewSwitch(this.view);
           self.closeSubNav();
-          $('.projects-sub-nav-3').removeClass("active-nav");
           $('.signature').attr('src', '');
           $('.signature').attr('src', '../assets/img/signature/aaron_sig.gif');
           $('.signature').removeClass('signature-fade');
+          $('.projects-sub-nav-3').removeClass("active-nav");
         } else {
           $('.signature').addClass('signature-fade');
         }

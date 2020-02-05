@@ -84,6 +84,15 @@ body {
   scroll-behavior: smooth !important;
 }
 
+button:active {
+  outline: none;
+  border: none;
+  }
+  
+  button:focus {
+    outline: 0;
+  }
+
 .display-none {
   display: none;
  
@@ -458,6 +467,31 @@ body {
     transform: translateX(-50%) translateY(-50%);
 }
 
+.projects-btn {
+  position: relative;
+  z-index: 99;
+  width: 33vw;
+    height: 10vh;
+    color: #fff;
+    border-radius: 9999999px;
+    background: transparent;
+    border: 2.4px solid #fff;
+    font-size: 1.7vw;
+    font-weight: 700;
+    letter-spacing: 3px;
+    transition: 350ms;
+}
+
+.jstorm-btn:hover {
+  background: #4D8DCA;
+  transition: 350ms;
+}
+
+.codebound-btn:hover {
+  background: #C2282D;
+  transition: 350ms;
+}
+
 header .overlay {
   position: absolute;
   top: 0;
@@ -465,7 +499,7 @@ header .overlay {
   height: 100%;
   width: 100%;
   color: #4D8DCA;
-  background-image: linear-gradient(to bottom, rgba(77, 141, 202, .5), 75%, rgba(77, 141, 202, .5));
+  background-image: linear-gradient(to bottom, rgba(77, 141, 202, .6), 75%, rgba(77, 141, 202, .6));
   z-index: 1;
 }
 
@@ -476,7 +510,7 @@ header .overlay-codebound {
   height: 100%;
   width: 100%;
   color: rgba(194,40,45, 1);
-  background: rgba(194,40,45, .7);
+  background: rgba(194,40,45, .56);
   z-index: 1;
 }
 
