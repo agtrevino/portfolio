@@ -248,7 +248,7 @@ button:active {
   }
 
   .bg2::after {
-    background-image: linear-gradient(to right, rgba(0, 0, 0, .22)  , rgba(0, 0, 0, .42)), url("../../assets/img/background/karl-chor-UvWlksgZGPE-unsplash.jpg");
+    background-image: linear-gradient(to right, rgba(0, 0, 0, .42)  , rgba(0, 0, 0, .42)), url("../../assets/img/background/graffiti-2.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -431,7 +431,7 @@ button:active {
   }
 
   .project-two-container-three {
-    background: #C2282D;
+    background: rgba(80, 84, 100, 1);
   }
 
   .contact-two-container {
@@ -474,7 +474,6 @@ button:active {
     height: 10vh;
     color: #fff;
     border-radius: 9999999px;
-    background: transparent;
     border: 2.4px solid #fff;
     font-size: 1.7vw;
     font-weight: 700;
@@ -482,8 +481,17 @@ button:active {
     transition: 350ms;
 }
 
+.jstorm-btn {
+  background: rgba(78, 142, 202, 0.5);
+  transition: 350ms;
+}
 .jstorm-btn:hover {
   background: #4D8DCA;
+  transition: 350ms;
+}
+
+.codebound-btn {
+  background: rgba(194, 40, 45, 0.5);
   transition: 350ms;
 }
 
@@ -510,8 +518,12 @@ header .overlay-codebound {
   height: 100%;
   width: 100%;
   color: rgba(194,40,45, 1);
-  background: rgba(194,40,45, .56);
+  background: rgba(80, 84, 100, .87);
   z-index: 1;
+}
+
+.codebound-img {
+  height: 50%;
 }
 
 .projects-quote-container {
