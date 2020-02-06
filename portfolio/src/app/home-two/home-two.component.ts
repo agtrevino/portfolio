@@ -23,19 +23,17 @@ export class HomeTwoComponent implements OnInit {
 
 
   closeSubNav() {
-    $('.sub-a').addClass("no-mouseover");
     $('.projects-sub-nav-3').removeClass("active-nav");
     setTimeout(function () {
       $('.projects-sub-nav-2').removeClass("active-nav");
       setTimeout(function () {
         $('.projects-sub-nav-1').removeClass("active-nav");
         $('.sub-menu-container').removeClass("expanded");
-    },250)
+      }, 150)
     }, 150)
   }
 
   openSubNav() {
-    $('.sub-a').removeClass("no-mouseover");
     $('.sub-menu-container').addClass("expanded");
     setTimeout(function () {
       $('.projects-sub-nav-1').addClass("active-nav");
