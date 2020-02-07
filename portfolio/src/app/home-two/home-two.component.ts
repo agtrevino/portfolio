@@ -20,13 +20,15 @@ export class HomeTwoComponent implements OnInit {
     this.resumeTitleViewCheck();
   }
 
+
+
   closeSubNav() {
-      $('.projects-sub-nav-3').removeClass("active-nav");
+    $('.projects-sub-nav-3').removeClass("active-nav");
+    setTimeout(function () {
+      $('.projects-sub-nav-2').removeClass("active-nav");
       setTimeout(function () {
-        $('.projects-sub-nav-2').removeClass("active-nav");
-        setTimeout(function () {
-          $('.projects-sub-nav-1').removeClass("active-nav");
-          $('.sub-menu-container').removeClass("expanded");
+        $('.projects-sub-nav-1').removeClass("active-nav");
+        $('.sub-menu-container').removeClass("expanded");
       }, 150)
     }, 150)
   }
@@ -174,26 +176,26 @@ export class HomeTwoComponent implements OnInit {
           self.viewSwitch(this.view);
         }
       });
-      $(".jstorm-viewport").each(function() {
+      $(".jstorm-viewport").each(function () {
         var offset = $(this).offset();
         if (scrollTop <= offset.top && ($(this).height() + offset.top) < (scrollTop + windowHeight)) {
           $('.jstorm-line').addClass('line-extend');
           $('.codebound-line').removeClass('line-extend');
-        } 
+        }
       })
-      $(".projects-main-viewport").each(function() {
+      $(".projects-main-viewport").each(function () {
         var offset = $(this).offset();
         if (scrollTop <= offset.top && ($(this).height() + offset.top) < (scrollTop + windowHeight)) {
           $('.jstorm-line').removeClass('line-extend');
           $('.codebound-line').removeClass('line-extend');
-        } 
+        }
       })
-      $(".codebound-viewport").each(function() {
+      $(".codebound-viewport").each(function () {
         var offset = $(this).offset();
         if (scrollTop <= offset.top && ($(this).height() + offset.top) < (scrollTop + windowHeight)) {
           $('.codebound-line').addClass('line-extend');
           $('.jstorm-line').removeClass('line-extend');
-        } 
+        }
       })
 
       $(".contact-two-viewport").each(function () {
@@ -202,7 +204,7 @@ export class HomeTwoComponent implements OnInit {
           $('.projects-sub-nav-3').removeClass("active-nav");
           this.view = 'contactView';
           self.viewSwitch(this.view);
-          
+
         }
       });
 
@@ -219,7 +221,7 @@ export class HomeTwoComponent implements OnInit {
         } else {
           $('.signature').addClass('signature-fade');
         }
-        
+
       });
     });
   }
