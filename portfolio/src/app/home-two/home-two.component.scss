@@ -103,6 +103,15 @@ button:active {
     min-height: 100vh;
     scroll-behavior: smooth !important;
 }
+
+.main-logo {
+    position: absolute;
+    top: 50px;
+    width: 10vw;
+    left: 50px;
+}
+
+
 .vertical-menu {
     z-index: 9999999999999;
     position: fixed;
