@@ -134,11 +134,13 @@ button:active {
   .sub-menu-container {
     height: calc(31.3333px * 0);
     transition: 500ms;
+    pointer-events: none;
   }
 
   .expanded {
     height: calc(31.3333px * 3);
     transition: 500ms;
+    pointer-events: all;
   }
   
   .line {
