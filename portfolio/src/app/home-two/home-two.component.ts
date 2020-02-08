@@ -255,21 +255,44 @@ export class HomeTwoComponent implements OnInit {
       $(".jstorm-title").each(function () {
         var offset = $(this).offset();
         if (scrollTop <= offset.top && ($(this).height() + offset.top) < (scrollTop + windowHeight)) {
-          $('.jstorm-title').addClass("fadeInUp");
-        } else {
-
+          setTimeout(function () {
+            $('.jstorm-title').addClass("fadeInUp");
+          }, 300);
         }
       });
       $(".jstorm-title-2").each(function () {
         var offset = $(this).offset();
         if (scrollTop <= offset.top && ($(this).height() + offset.top) < (scrollTop + windowHeight)) {
-          $('.jstorm-title-2').addClass("fadeInUp");
-          $('.vertical-text-2').addClass("color-white");
+          $('.jstorm-img-1').addClass("fadeInUp");
+          $('.jstorm-img-2').addClass("fadeInUp");
           setTimeout(function () {
-            $('.jstorm-text').addClass("fadeInUp");
+            $('.jstorm-title-2').addClass("fadeInUp");
+            setTimeout(function () {
+              $('.jstorm-text').addClass("fadeInUp");
+            }, 300);
           }, 300);
-        } else {
-          $('.vertical-text-2').removeClass("color-white");
+        }
+      });
+
+      $(".codebound-title").each(function () {
+        var offset = $(this).offset();
+        if (scrollTop <= offset.top && ($(this).height() + offset.top) < (scrollTop + windowHeight)) {
+          setTimeout(function () {
+            $('.codebound-title').addClass("fadeInUp");
+          }, 300);
+        }
+      });
+      $(".codebound-title-2").each(function () {
+        var offset = $(this).offset();
+        if (scrollTop <= offset.top && ($(this).height() + offset.top) < (scrollTop + windowHeight)) {
+          $('.codebound-img').addClass("fadeInUp");
+          setTimeout(function () {
+            $('.codebound-title-2').addClass("fadeInUp");
+            setTimeout(function () {
+              $('.codebound-text').addClass("fadeInUp");
+            }, 300);
+          }, 300);
+
         }
       });
 

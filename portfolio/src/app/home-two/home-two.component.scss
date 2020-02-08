@@ -617,6 +617,25 @@ header .overlay-codebound {
     padding-right: 24px;
   }
 
+  .codebound-title-2 {
+    font-family: 'ralewayExtraBold', sans-serif;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 800;
+    letter-spacing: -1px;
+    line-height: 52px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    border-right: 6px solid #eb3b5a;
+    padding-right: 24px;
+  }
+
+  .codebound-text {
+    font-size: 22px;
+    color: #fff;
+    font-family: 'ralewaySemi';
+  }
+
   .arrow-down {
     position: relative;
     left: 63px;
@@ -1069,6 +1088,19 @@ $black: #eb3b5a;
   }
   
   .jstorm-title-2 {
+    font-family: 'ralewayExtraBold', sans-serif;
+    font-size: 42px;
+    font-style: normal;
+    font-weight: 800;
+    letter-spacing: 0px;
+    line-height: 34px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    border-right: 6px solid #eb3b5a;
+    padding-right: 24px;
+  }
+
+  .codebound-title-2 {
     font-family: 'ralewayExtraBold', sans-serif;
     font-size: 42px;
     font-style: normal;
