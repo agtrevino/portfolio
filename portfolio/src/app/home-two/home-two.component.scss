@@ -105,10 +105,16 @@ button:active {
 }
 
 .main-logo {
-    position: absolute;
-    top: 50px;
-    width: 10vw;
-    left: 50px;
+  position: fixed;
+  top: -30px;
+  width: 8vw;
+  right: 50px;
+  z-index: 999;
+  transition: 350ms;
+}
+
+.main-logo-poly {
+  transition: 350ms;
 }
 
 
@@ -330,7 +336,7 @@ button:active {
     z-index: 20;
     position: absolute;
     top: 20px;
-    right: 32px;
+    left: 32px;
   }
 
 
@@ -671,6 +677,7 @@ $black: #eb3b5a;
 
 .resume-button {
   position: relative;
+  z-index: 999;
   // display: inline-block;
   margin-left: auto;
   margin-right: auto;

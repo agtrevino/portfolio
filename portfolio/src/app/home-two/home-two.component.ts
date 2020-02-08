@@ -82,12 +82,18 @@ export class HomeTwoComponent implements OnInit {
     $('.resume-nav').removeClass("active-nav");
     $('.resume-circle').removeClass("nav-circle-black");
 
+    $('.main-logo-poly').css({ fill: "#fff" });
+    $('.main-logo-poly').css({ stroke: "#fff" });
+
 
   }
 
   isResumeView() {
     this.closeSubNav();
     $('.projects-sub-nav-3').removeClass("active-nav");
+
+    $('.main-logo-poly').css({ fill: "#505464" });
+    $('.main-logo-poly').css({ stroke: "#505464" });
 
     $('.resume-nav').addClass("active-nav");
     $('.resume-circle').addClass("active-circle-black");
@@ -124,7 +130,8 @@ export class HomeTwoComponent implements OnInit {
     $('.home-nav').removeClass("active-nav");
     $('.contact-circle').removeClass("active-circle");
     $('.contact-nav').removeClass("active-nav");
-
+    $('.main-logo-poly').css({ fill: "#fff" });
+    $('.main-logo-poly').css({ stroke: "#fff" });
 
   }
 
@@ -140,7 +147,8 @@ export class HomeTwoComponent implements OnInit {
     $('.projects-nav').removeClass("active-nav");
     $('.home-circle').removeClass("active-circle");
     $('.home-nav').removeClass("active-nav");
-
+    $('.main-logo-poly').css({ fill: "#fff" });
+    $('.main-logo-poly').css({ stroke: "#fff" });
 
 
   }
