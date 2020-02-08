@@ -979,6 +979,35 @@ $black: #eb3b5a;
 
 @media only screen and (max-width: 680px) {
 
+  .main-logo {
+    position: fixed;
+    top: -50px;
+    width: 15vw;
+    right: 15px;
+    z-index: 999;
+    transition: 350ms;
+}
+
+.projects-btn {
+  position: relative;
+  z-index: 99;
+  width: 58vw;
+  height: 10vh;
+  color: #fff;
+  border-radius: 9999999px;
+  border: 2.4px solid #fff;
+  font-size: 4.7vw;
+  font-weight: 700;
+  letter-spacing: 3px;
+  transition: 350ms;
+}
+
+.expanded {
+  height: calc(31.3333px * 0);
+  transition: 500ms;
+  pointer-events: all;
+}
+
   .intro-paragraph-2 {
     padding: 20px 50px;
     text-align: left;
