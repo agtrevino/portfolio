@@ -58,6 +58,9 @@ export class HomeTwoComponent implements OnInit {
       case 'projectsView':
         this.isProjectsView();
         break;
+        case 'appddictionView':
+        this.isAppddictionView();
+        break;
       case 'contactView':
         this.isContactView();
         break;
@@ -108,7 +111,27 @@ export class HomeTwoComponent implements OnInit {
     $('.home-circle').removeClass("active-circle");
     $('.home-nav').removeClass("active-nav");
 
+  }
 
+  isAppddictionView() {
+    $('.projects-sub-nav-3').removeClass("active-nav");
+
+    $('.main-logo-poly').css({ fill: "#505464" });
+    $('.main-logo-poly').css({ stroke: "#505464" });
+
+    $('.resume-nav').removeClass("active-nav");
+    $('.resume-circle').removeClass("active-circle-black");
+    $('.resume-circle').removeClass("nav-circle-black");
+    $('.projects-circle').addClass("nav-circle-black");
+    $('.vertical-text-2').addClass("color-black");
+    $('.nav-link-text').addClass("color-black");
+    $('.line').addClass("line-black");
+    $('.nav-circle').addClass("circle-black");
+
+    // $('.projects-circle').removeClass("active-circle");
+    // $('.projects-nav').removeClass("active-nav");
+    $('.home-circle').removeClass("active-circle");
+    $('.home-nav').removeClass("active-nav");
 
   }
 
@@ -203,6 +226,17 @@ export class HomeTwoComponent implements OnInit {
         if (scrollTop <= offset.top && ($(this).height() + offset.top) < (scrollTop + windowHeight)) {
           $('.codebound-line').addClass('line-extend');
           $('.jstorm-line').removeClass('line-extend');
+        }
+      })
+
+      $(".appddiction-viewport").each(function () {
+        var offset = $(this).offset();
+        if (scrollTop <= offset.top && ($(this).height() + offset.top) < (scrollTop + windowHeight)) {
+          this.view = 'appddictionView';
+          self.viewSwitch(this.view);
+          $('.appddiction-line').addClass('line-extend');
+          $('.jstorm-line').removeClass('line-extend');
+          $('.codebound-line').removeClass('line-extend');
         }
       })
 
