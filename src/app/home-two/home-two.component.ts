@@ -14,12 +14,25 @@ export class HomeTwoComponent implements OnInit {
   view: string;
 
   ngOnInit() {
+    this.expandingCards();
     this.navAnim();
     // this.viewSwitch();
     this.navViewCheck();
     this.resumeTitleViewCheck();
   }
 
+  expandingCards() {
+    $(".columnContainer").on("mouseenter", "div", function (e) {
+      console.log("mouseenter"); 
+      $('.mainColumn').width('10%');
+      $(e.target).width('60%')
+    });
+
+    $(".columnContainer").on("mouseleave", "div", function (e) {
+      console.log("mouseleave");
+      $('.mainColumn').width('20%');
+    });
+  }
 
 
   closeSubNav() {
@@ -183,7 +196,7 @@ export class HomeTwoComponent implements OnInit {
 
     $('.main-logo-poly').css({ fill: "#fff" });
     $('.main-logo-poly').css({ stroke: "#fff" });
-    
+
     $('.sub-menu-container').removeClass("expanded");
 
     setTimeout(function () {
@@ -375,6 +388,8 @@ export class HomeTwoComponent implements OnInit {
       }, 300)
     }, 600)
   }
+
+
 }
 
 
