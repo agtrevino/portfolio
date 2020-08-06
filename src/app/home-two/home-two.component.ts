@@ -58,7 +58,7 @@ export class HomeTwoComponent implements OnInit {
       case 'projectsView':
         this.isProjectsView();
         break;
-        case 'appddictionView':
+      case 'appddictionView':
         this.isAppddictionView();
         break;
       case 'contactView':
@@ -114,7 +114,7 @@ export class HomeTwoComponent implements OnInit {
   }
 
   isAppddictionView() {
-    $('.projects-sub-nav-3').removeClass("active-nav");
+    this.openSubNav();
 
     $('.main-logo-poly').css({ fill: "#505464" });
     $('.main-logo-poly').css({ stroke: "#505464" });
@@ -123,13 +123,15 @@ export class HomeTwoComponent implements OnInit {
     $('.resume-circle').removeClass("active-circle-black");
     $('.resume-circle').removeClass("nav-circle-black");
     $('.projects-circle').addClass("nav-circle-black");
+    $('.projects-circle').addClass("active-circle-black");
+    $('.projects-nav').addClass("active-nav");
     $('.vertical-text-2').addClass("color-black");
     $('.nav-link-text').addClass("color-black");
     $('.line').addClass("line-black");
     $('.nav-circle').addClass("circle-black");
 
-    // $('.projects-circle').removeClass("active-circle");
-    // $('.projects-nav').removeClass("active-nav");
+    $('.contact-circle').removeClass("active-circle");
+    $('.contact-nav').removeClass("active-nav");
     $('.home-circle').removeClass("active-circle");
     $('.home-nav').removeClass("active-nav");
 
@@ -141,6 +143,7 @@ export class HomeTwoComponent implements OnInit {
 
     $('.projects-nav').addClass("active-nav");
     $('.projects-circle').addClass("active-circle");
+
 
     $('.nav-link-text').removeClass("color-black");
     $('.line').removeClass("line-black");
@@ -170,8 +173,22 @@ export class HomeTwoComponent implements OnInit {
     $('.projects-nav').removeClass("active-nav");
     $('.home-circle').removeClass("active-circle");
     $('.home-nav').removeClass("active-nav");
+    $('.nav-link-text').removeClass("color-black");
+    $('.line').removeClass("line-black");
+    $('.nav-circle').removeClass("circle-black");
+    $('.vertical-text-2').removeClass("color-black");
+    $('.resume-circle').removeClass("active-circle-black");
+    $('.resume-nav').removeClass("active-nav");
+    $('.resume-circle').removeClass("nav-circle-black");
+
     $('.main-logo-poly').css({ fill: "#fff" });
     $('.main-logo-poly').css({ stroke: "#fff" });
+    
+    $('.sub-menu-container').removeClass("expanded");
+
+    setTimeout(function () {
+      this.closeSubNav();
+    }, 550)
 
 
   }
@@ -212,6 +229,7 @@ export class HomeTwoComponent implements OnInit {
         if (scrollTop <= offset.top && ($(this).height() + offset.top) < (scrollTop + windowHeight)) {
           $('.jstorm-line').addClass('line-extend');
           $('.codebound-line').removeClass('line-extend');
+          $('.appddiction-line').removeClass('line-extend');
         }
       })
       $(".projects-main-viewport").each(function () {
@@ -219,6 +237,7 @@ export class HomeTwoComponent implements OnInit {
         if (scrollTop <= offset.top && ($(this).height() + offset.top) < (scrollTop + windowHeight)) {
           $('.jstorm-line').removeClass('line-extend');
           $('.codebound-line').removeClass('line-extend');
+          $('.appddiction-line').removeClass('line-extend');
         }
       })
       $(".codebound-viewport").each(function () {
@@ -226,6 +245,8 @@ export class HomeTwoComponent implements OnInit {
         if (scrollTop <= offset.top && ($(this).height() + offset.top) < (scrollTop + windowHeight)) {
           $('.codebound-line').addClass('line-extend');
           $('.jstorm-line').removeClass('line-extend');
+          $('.appddiction-line').removeClass('line-extend');
+          $('.projects-circle').removeClass("active-circle-black");
         }
       })
 
@@ -243,6 +264,7 @@ export class HomeTwoComponent implements OnInit {
       $(".contact-two-viewport").each(function () {
         var offset = $(this).offset();
         if (scrollTop <= offset.top && ($(this).height() + offset.top) < (scrollTop + windowHeight)) {
+          $('.projects-sub-nav-3').removeClass("active-nav");
           $('.projects-sub-nav-3').removeClass("active-nav");
           this.view = 'contactView';
           self.viewSwitch(this.view);

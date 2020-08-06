@@ -141,6 +141,12 @@ button:focus {
   pointer-events: all;
 }
 
+.closed {
+  height: 0;
+  transition: 500ms;
+  pointer-events: all;
+}
+
 .line {
   padding-top: 13px;
   border-bottom: 1px solid #fff;
@@ -487,6 +493,10 @@ button:focus {
   background: rgba(80, 84, 100, 1);
 }
 
+.project-two-container-four {
+  background: #fff;
+}
+
 .contact-two-container {
   background: #505464;
 }
@@ -582,7 +592,7 @@ header .overlay-white {
   height: 100%;
   width: 100%;
   color: #4d8dca;
-  background-image: linear-gradient(to bottom, rgba(225, 225, 225, 0.6), 75%, rgba(225, 225, 225, 0.6));
+  background-image: linear-gradient(to bottom, rgba(225, 225, 225, 0.63), 75%, rgba(225, 225, 225, 0.63));
   z-index: 1;
 }
 
@@ -652,7 +662,7 @@ header .overlay-white {
 }
 
 .appddiction-title {
-  color: #505464;
+  color: #505464 !important;
 }
 
 .jstorm-title-2 {
@@ -729,6 +739,16 @@ header .overlay-white {
   line-height: 34px;
   /* font-family: 'ralewaySemi'; */
   color: #fff;
+}
+
+.site-btn {
+  opacity: .67;
+  transition: 300ms ease-in-out;
+}
+
+.site-btn:hover {
+  opacity: 1;
+  transition: 300ms ease-in-out;
 }
 
 // =====================================================================================SCSS
@@ -1136,7 +1156,7 @@ $black: #eb3b5a;
     z-index: 9999999999999;
     position: fixed;
     right: 12px;
-    width: 80px;
+    width: 30px;
     top: 45%;
   }
 

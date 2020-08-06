@@ -31,7 +31,7 @@
     </div>
   </a>
   <a href="#projectsTwo">
-    <div id="projects-nav" class="animatedFadeInUp animated nav-link-container row mb-2">
+    <div (click)="isProjectsView()" id="projects-nav" class="animatedFadeInUp animated nav-link-container row mb-2">
       <div class="nav-link-text col text-right projects-nav projects-nav-2">
         projects
       </div>
@@ -89,7 +89,7 @@
   <!-- ===================================== PROJECTS SUBMENU ==================== -->
 
   <a href="#contactTwo ">
-    <div id="contact-nav" class="animatedFadeInUp animated nav-link-container row">
+    <div (click)="isContactView()" id="contact-nav" class="animatedFadeInUp animated nav-link-container row">
       <div class="nav-link-text col text-right contact-nav">
         contact
       </div>
@@ -355,9 +355,19 @@
           </h1>
         </div>
         <div class="col-12 my-auto text-center">
+
           <a href="https://teamjstorm.com/" target="_blank">
-            <button class="projects-btn jstorm-btn">visit teamjstorm.com</button>
+            <button class="resume-button learn-more site-btn">
+              <span class="circle" style="border: 2px solid #fff;background: #4D8DCA !important;">
+                <span class="icon arrow"></span>
+              </span>
+              <span class="button-text text-white">visit site</span>
+            </button>
           </a>
+
+          <!-- <a href="https://teamjstorm.com/" target="_blank">
+            <button class="projects-btn jstorm-btn">visit teamjstorm.com</button>
+          </a> -->
         </div>
       </div>
       <div class="overlay"></div>
@@ -444,8 +454,16 @@
           </h1>
         </div>
         <div class="col-12 my-auto text-center">
-          <a href="https://www.codebound.com/" target="_b/ank">
+          <!-- <a href="https://www.codebound.com/" target="_b/ank">
             <button class="projects-btn codebound-btn">visit codebound.com</button>
+          </a> -->
+          <a href="https://www.codebound.com/" target="_blank">
+            <button class="resume-button learn-more site-btn">
+              <span class="circle" style="border: 2px solid #fff;background: #C60A0A !important;">
+                <span class="icon arrow"></span>
+              </span>
+              <span class="button-text text-white">visit site</span>
+            </button>
           </a>
         </div>
       </div>
@@ -490,8 +508,8 @@
           WEBSITE
         </h1>
         <p class="codebound-text animated animatedFadeInUp">
-          Website for the San Antonio, Texas based computer programming
-          bootcamp, CodeBound, that I've done the front end development for.
+          Website created for the full stack software development
+          bootcamp, CodeBound.
         </p>
       </div>
 
@@ -532,8 +550,16 @@
         </div>
         <div class="col-12 my-auto text-center">
           <a href="https://appddictionstudio.com/" target="_blank">
-            <button class="projects-btn jstorm-btn">visit appddictionstudio.com</button>
+            <button class="resume-button learn-more site-btn">
+              <span class="circle" style="border: 2px solid #fff;background: #C60A0A !important;">
+                <span class="icon arrow"></span>
+              </span>
+              <span class="button-text">visit site</span>
+            </button>
           </a>
+          <!-- <a href="https://appddictionstudio.com/" target="_blank">
+            <button class="projects-btn codebound-btn">visit appddictionstudio.com</button>
+          </a> -->
         </div>
         <div class="projects-two-viewport appddiction-viewport"></div>
       </div>
@@ -561,30 +587,35 @@
         </div>
       </div>
     </header>
-    
+
   </section>
-  <section id="projectsContSix" class="section jstorm-logo-section project-two-container-two">
+  <section id="projectsContSix" class="section jstorm-logo-section project-two-container-four">
     <div class="row h-100 p-5">
       <div class="col-lg-6">
-        <div class="row">
-          <img class="jstorm-logo-img w-100 jstorm-img-1 animated animatedFadeInUp"
-            src="../../assets/img/jstorm-logo/j.storm-logo-blk.png">
+        <div class="row mb-5">
+          <div class="col-12 ">
+            <img class="jstorm-logo-img w-100 mb-4 jstorm-img-2 animated animatedFadeInUp"
+              src="../../assets/img/appddiction/app_logo_website.gif">
+          </div>
         </div>
         <div class="row">
-          <img class="jstorm-logo-img w-100 mb-4 jstorm-img-2 animated animatedFadeInUp"
-            src="../../assets/img/jstorm-logo/j.storm-logo-wht.png">
+          <div class="col-12 text-center">
+            <img class="jstorm-logo-img w-50 jstorm-img-1 animated animatedFadeInUp"
+              src="../../assets/img/appddiction/Logo Circle Badge - White, Red Background.svg">
+          </div>
         </div>
       </div>
+
       <div class="col-lg-6 jstorm-right-section text-right">
-        <h1 class="jstorm-title-2 animated animatedFadeInUp">
-          J.STORM
+        <h1 class="jstorm-title-2 appddiction-title animated animatedFadeInUp">
+          APPDDICTION STUDIO
           <br>
-          LOGO DESIGN
+          WEBSITE
         </h1>
-        <p class="jstorm-text animated animatedFadeInUp">
-          Logo created for Jeremy Lin's professional
+        <p class="jstorm-text appddiction-title animated animatedFadeInUp">
+          Website created for the San Antonio, Texas based
           <br>
-          Esports organization, J.Storm.
+          tech company, Appddiction Studio.
         </p>
       </div>
       <div class="project-two-viewport appddiction-viewport"></div>
@@ -596,9 +627,9 @@
             xmlns:xlink="http://www.w3.org/1999/xlink">
             <g id="btn-arrow-down" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
               <g id="Group-3">
-                <rect id="arrow-line" fill="#FFFFFF" x="26" y="-3" width="2" height="83">
+                <rect id="arrow-line" fill="#505464" x="26" y="-3" width="2" height="83">
                 </rect>
-                <polygon id="arrow" fill="#FFFFFF"
+                <polygon id="arrow" fill="#505464"
                   transform="translate(27.000000, 72.000000) rotate(-45.000000) translate(-27.000000, -72.000000) "
                   points="20 65 22 65 22 77 34 77 34 79 20 79">
                 </polygon>
