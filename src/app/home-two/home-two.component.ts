@@ -22,16 +22,37 @@ export class HomeTwoComponent implements OnInit {
   }
 
   expandingCards() {
-    $(".columnContainer").on("mouseenter", "div", function (e) {
-      console.log("mouseenter"); 
-      $('.mainColumn').width('10%');
-      $(e.target).width('60%')
+    $(".jstorm-col").on("mouseover", "div", function (e) {
+      setTimeout(function () {
+        $('.jstorm-title-2').addClass("fadeInUp");
+        $('.jstorm-logo-img').addClass("fadeInUp");
+        $('.jstorm-text').addClass("fadeInUp");
+      }, 200);
+    });
+    $(".jstorm-col").on("mouseleave", "div", function (e) {
+      setTimeout(function () {
+        $('.jstorm-title-2').removeClass("fadeInUp");
+        $('.jstorm-logo-img').removeClass("fadeInUp");
+        $('.jstorm-text').removeClass("fadeInUp");
+      }, 200);
     });
 
-    $(".columnContainer").on("mouseleave", "div", function (e) {
-      console.log("mouseleave");
-      $('.mainColumn').width('20%');
+    $(".codebound-col").on("mouseover", "div", function (e) {
+      setTimeout(function () {
+        $('.codebound-title-2').addClass("fadeInUp");
+        // $('.jstorm-logo-img').addClass("fadeInUp");
+        $('.codebound-text').addClass("fadeInUp");
+      }, 200);
     });
+    $(".codebound-col").on("mouseleave", "div", function (e) {
+      setTimeout(function () {
+        $('.codebound-title-2').removeClass("fadeInUp");
+        // $('.jstorm-logo-img').removeClass("fadeInUp");
+        $('.codebound-text').removeClass("fadeInUp");
+      }, 200);
+    });
+
+    
   }
 
 
@@ -105,8 +126,7 @@ export class HomeTwoComponent implements OnInit {
   }
 
   isResumeView() {
-    this.closeSubNav();
-    $('.projects-sub-nav-3').removeClass("active-nav");
+    // $('.projects-sub-nav-3').removeClass("active-nav");
 
     $('.main-logo-poly').css({ fill: "#505464" });
     $('.main-logo-poly').css({ stroke: "#505464" });
@@ -198,10 +218,6 @@ export class HomeTwoComponent implements OnInit {
     $('.main-logo-poly').css({ stroke: "#fff" });
 
     $('.sub-menu-container').removeClass("expanded");
-
-    setTimeout(function () {
-      this.closeSubNav();
-    }, 550)
 
 
   }
@@ -324,46 +340,46 @@ export class HomeTwoComponent implements OnInit {
       $(".jstorm-title").each(function () {
         var offset = $(this).offset();
         if (scrollTop <= offset.top && ($(this).height() + offset.top) < (scrollTop + windowHeight)) {
-          setTimeout(function () {
-            $('.jstorm-title').addClass("fadeInUp");
-          }, 300);
+          // setTimeout(function () {
+          //   $('.jstorm-title').addClass("fadeInUp");
+          // }, 300);
         }
       });
-      $(".jstorm-title-2").each(function () {
-        var offset = $(this).offset();
-        if (scrollTop <= offset.top && ($(this).height() + offset.top) < (scrollTop + windowHeight)) {
-          $('.jstorm-img-1').addClass("fadeInUp");
-          $('.jstorm-img-2').addClass("fadeInUp");
-          setTimeout(function () {
-            $('.jstorm-title-2').addClass("fadeInUp");
-            setTimeout(function () {
-              $('.jstorm-text').addClass("fadeInUp");
-            }, 300);
-          }, 300);
-        }
-      });
+      // $(".jstorm-title-2").each(function () {
+      //   var offset = $(this).offset();
+      //   if (scrollTop <= offset.top && ($(this).height() + offset.top) < (scrollTop + windowHeight)) {
+      //     $('.jstorm-img-1').addClass("fadeInUp");
+      //     $('.jstorm-img-2').addClass("fadeInUp");
+      //     setTimeout(function () {
+      //       // $('.jstorm-title-2').addClass("fadeInUp");
+      //       setTimeout(function () {
+      //         $('.jstorm-text').addClass("fadeInUp");
+      //       }, 300);
+      //     }, 300);
+      //   }
+      // });
 
       $(".codebound-title").each(function () {
         var offset = $(this).offset();
         if (scrollTop <= offset.top && ($(this).height() + offset.top) < (scrollTop + windowHeight)) {
-          setTimeout(function () {
-            $('.codebound-title').addClass("fadeInUp");
-          }, 300);
+          // setTimeout(function () {
+          //   $('.codebound-title').addClass("fadeInUp");
+          // }, 300);
         }
       });
-      $(".codebound-title-2").each(function () {
-        var offset = $(this).offset();
-        if (scrollTop <= offset.top && ($(this).height() + offset.top) < (scrollTop + windowHeight)) {
-          $('.codebound-img').addClass("fadeInUp");
-          setTimeout(function () {
-            $('.codebound-title-2').addClass("fadeInUp");
-            setTimeout(function () {
-              $('.codebound-text').addClass("fadeInUp");
-            }, 300);
-          }, 300);
+      // $(".codebound-title-2").each(function () {
+      //   var offset = $(this).offset();
+      //   if (scrollTop <= offset.top && ($(this).height() + offset.top) < (scrollTop + windowHeight)) {
+      //     $('.codebound-img').addClass("fadeInUp");
+      //     setTimeout(function () {
+      //       $('.codebound-title-2').addClass("fadeInUp");
+      //       setTimeout(function () {
+      //         $('.codebound-text').addClass("fadeInUp");
+      //       }, 300);
+      //     }, 300);
 
-        }
-      });
+      //   }
+      // });
 
     });
   }

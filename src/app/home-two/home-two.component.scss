@@ -410,7 +410,7 @@ button:focus {
   transition: 300ms;
 }
 
-.color-black {
+.expansion-color-black {
   color: #505464 !important;
   transition: 400ms;
   font-family: "ralewayLight" !important;
@@ -524,10 +524,10 @@ header {
   width: auto;
   height: auto;
   z-index: 0;
-  -ms-transform: translateX(-50%) translateY(-50%);
-  -moz-transform: translateX(-50%) translateY(-50%);
-  -webkit-transform: translateX(-50%) translateY(-50%);
-  transform: translateX(-50%) translateY(-50%);
+  -ms-transform: translateX(-50%) translateY(-50%) skew(20deg, 0);
+  -moz-transform: translateX(-50%) translateY(-50%) skew(20deg, 0);
+  -webkit-transform: translateX(-50%) translateY(-50%) skew(20deg, 0);
+  transform: translateX(-50%) translateY(-50%) skew(20deg, 0);
 }
 
 .projects-btn {
@@ -573,6 +573,8 @@ header .overlay {
   background-image: linear-gradient(to bottom, rgba(77, 141, 202, 0.6), 75%, rgba(77, 141, 202, 0.6));
   z-index: 1;
 }
+
+
 
 header .overlay-codebound {
   position: absolute;
@@ -665,18 +667,7 @@ header .overlay-white {
   color: #505464 !important;
 }
 
-.jstorm-title-2 {
-  font-family: "ralewayExtraBold", sans-serif;
-  font-size: 64px;
-  font-style: normal;
-  font-weight: 800;
-  letter-spacing: -1px;
-  line-height: 52px;
-  text-transform: uppercase;
-  color: #ffffff;
-  border-right: 6px solid #eb3b5a;
-  padding-right: 24px;
-}
+
 
 .codebound-title-2 {
   font-family: "ralewayExtraBold", sans-serif;
@@ -741,6 +732,13 @@ header .overlay-white {
   color: #fff;
 }
 
+.site-btn-container {
+  position: absolute;
+    bottom: 30vh;
+    left: 0;
+    right: 0;
+}
+
 .site-btn {
   opacity: .67;
   transition: 300ms ease-in-out;
@@ -751,77 +749,132 @@ header .overlay-white {
   transition: 300ms ease-in-out;
 }
 
-// =====================================================================================EXPANDING CARDS
+// =======================================================================================================================================================================EXPANDING CARDS
 
-.columnContainer {
+.expansion-section {
+  transform: skew(20deg, 0);
+}
+video {
+  height: 100%;
+  width: 177.77777778vh;
+  min-width: 100%;
+  min-height: 56.25vw; 
+}
+
+.jstorm-title-2 {
+  font-family: "ralewayExtraBold", sans-serif;
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 800;
+  letter-spacing: -1px;
+  line-height: 52px;
+  text-transform: uppercase;
+  color: #ffffff;
+  border-right: 6px solid #eb3b5a;
+  padding-right: 24px;
+}
+
+.codebound-title-2 {
+  font-family: "ralewayExtraBold", sans-serif;
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 800;
+  letter-spacing: -1px;
+  line-height: 52px;
+  text-transform: uppercase;
+  color: #ffffff;
+  border-right: 6px solid #eb3b5a;
+  padding-right: 24px;
+}
+
+.overlay-codebound {
   position: absolute;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  white-space: nowrap;
-  display: block;
-  left: 0;
   top: 0;
-}
-
-.mainColumn {
-  width: 20%;
+  left: 0;
   height: 100%;
-  float: left;
-  display: inline-block;
-  position: relative;
-  z-index: 13;
-  background-position: center;
-  background-size: cover;
-  -webkit-transition: width .3s ease-in-out;
-  -moz-transition: width .3s ease-in-out;
-  -o-transition: width .3s ease-in-out;
-  transition: width .3s ease-in-out;
+  width: 100%;
+  background: rgba(80, 84, 100, 1);
+  z-index: 1;
+  transition: all 350ms ease-in-out;
 }
 
-.mainColumnLarge {
-  width: 40%;
+.codebound-col:hover > .overlay-codebound {
+  background: rgba(80, 84, 100, .52);
+  transition: all 350ms ease-in-out;
+}
+
+.overlay-blue {
+  position: absolute;
+  top: 0;
+  left: 0;
   height: 100%;
-  display: inline-block;
+  width: 100%;
+  background: rgba(77, 141, 202, 1);
+  z-index: 1;
+  transition: all 350ms ease-in-out;
+}
+
+.jstorm-col:hover > .overlay-blue {
+  background: rgba(77, 141, 202, .6);
+  transition: all 350ms ease-in-out;
+}
+
+.content {
+  display: flex;
+  width: 100%;
+  color: #fff;
+  overflow: hidden;
+  // border: 5px solid #f00;
+}
+
+.expansion-col {
   position: relative;
-  z-index: 15;
+  overflow: hidden;
+  flex-grow: 1;
+  flex-basis: 0;
+  transition: flex-grow .3s;
+
+  transform: skew(-20deg, 0);
 }
 
-.columnOne {
-  background-image: linear-gradient(to right, rgba(0, 0, 0, .2), rgba(0, 0, 0, .2)),
-    url("../../assets/img/background/graffiti-4.jpg");
-  background-position: left;
-  background-repeat: no-repeat;
-  background-size: cover;
+.expansion-col + .expansion-col {
+  border-left: 1px solid #505464;
 }
 
-.columnOne:hover {
-  background-image: linear-gradient(to right, rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)),
-    url("../../assets/img/background/graffiti-4.jpg");
+.expansion-col:first-child {
+  margin-left: -100px;
+}
+.expansion-col:last-child {
+  margin-right: -100px;
 }
 
-.columnTwo {
-  background-color: rgba(200, 250, 200, 0.5);
+.expansion-col::before {
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: calc(100% + 200px);
+  margin-left: -100px;
+  display: block;
+  background-attachment: fixed;
+  transform: skew(20deg, 0);
 }
 
-.columnThree {
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
-    url("../../assets/img/background/graffiti-4.jpg");
-  background-position: left;
-  background-repeat: no-repeat;
-  background-size: cover;
+.expansion-col:hover {
+  flex-grow: 3;
+  transition: flex-grow .3s;
 }
 
-.columnFour {
-  background-color: rgba(200, 225, 225, 0.5);
+.expansion-col h1 {
+  margin: 0;
+  padding: 10px;
+  transform: skew(20deg, 0);
 }
 
-.columnFive {
-  background-color: rgba(225, 200, 225, 0.5);
+.expansion-col:first-child h1 {
+  margin-left: 40px;
 }
 
-
-// =====================================================================================SCSS
+// ============================================================================================================================================================SCSS
 
 $white: #fff;
 $black: #eb3b5a;
@@ -989,12 +1042,12 @@ $black: #eb3b5a;
 .animated {
   animation-duration: 1s;
   animation-fill-mode: both;
-  -webkit-animation-duration: 1s;
+  // -webkit-animation-duration: 1s;
   -webkit-animation-fill-mode: both;
 }
 
 .animatedFadeInUp {
-  opacity: 0;
+  opacity: 0 ;
 }
 
 .fadeInUp {
@@ -1003,7 +1056,7 @@ $black: #eb3b5a;
   -webkit-animation-name: fadeInUp;
 }
 
-.color-white {
+.expansion-color-white {
   color: #fff !important;
   transition: 300ms;
 }
