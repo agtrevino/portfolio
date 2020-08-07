@@ -179,6 +179,9 @@ export class HomeTwoComponent implements OnInit {
     $('.line').addClass("line-black");
     $('.nav-circle').addClass("circle-black");
 
+    $('.contact-circle').removeClass("active-circle");
+    $('.contact-nav').removeClass("active-nav");
+
     $('.projects-circle').removeClass("active-circle");
     $('.projects-nav').removeClass("active-nav");
     $('.home-circle').removeClass("active-circle");
@@ -428,9 +431,9 @@ export class HomeTwoComponent implements OnInit {
     setTimeout(function () {
       $('#home-nav').addClass("fadeInUp");
       setTimeout(function () {
-        $('#resume-nav').addClass("fadeInUp");
+        $('#projects-nav').addClass("fadeInUp");
         setTimeout(function () {
-          $('#projects-nav').addClass("fadeInUp");
+          $('#resume-nav').addClass("fadeInUp");
           setTimeout(function () {
             $('#contact-nav').addClass("fadeInUp");
             setTimeout(function () {
