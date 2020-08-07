@@ -410,12 +410,13 @@ button:focus {
   transition: 300ms;
 }
 
-.expansion-color-black {
+.expansion-color-black, .color-black {
   color: #505464 !important;
   transition: 400ms;
   font-family: "ralewayLight" !important;
   font-weight: 700;
 }
+
 
 .line-black {
   border-bottom: 1px solid #505464 !important;
@@ -664,6 +665,8 @@ header .overlay-white {
 }
 
 .appddiction-title {
+  font-size: 22px;
+  font-family: "ralewaySemi";
   color: #505464 !important;
 }
 
@@ -682,7 +685,8 @@ header .overlay-white {
   padding-right: 24px;
 }
 
-.codebound-text {
+.codebound-text,
+.mp-text {
   font-size: 22px;
   color: #fff;
   font-family: "ralewaySemi";
@@ -732,9 +736,18 @@ header .overlay-white {
   color: #fff;
 }
 
+.site-logo-container {
+  position: absolute;
+    top: 3vh;
+    left: 0;
+    right: 0;
+    opacity: 1;
+    transition: all 300ms ease-in-out;
+}
+
 .site-btn-container {
   position: absolute;
-    bottom: 30vh;
+    bottom: 20vh;
     left: 0;
     right: 0;
 }
@@ -750,9 +763,17 @@ header .overlay-white {
 }
 
 // =======================================================================================================================================================================EXPANDING CARDS
-
+.mp-logo-img {
+  max-height: 250px;
+}
 .expansion-section {
   transform: skew(20deg, 0);
+}
+.jstorm-site-logo,
+.appddiction-site-logo,
+.codebound-site-logo,
+.mp-site-logo {
+  max-width: 175px;
 }
 video {
   height: 100%;
@@ -761,7 +782,7 @@ video {
   min-height: 56.25vw; 
 }
 
-.jstorm-title-2 {
+.appddiction-title-2 {
   font-family: "ralewayExtraBold", sans-serif;
   font-size: 64px;
   font-style: normal;
@@ -769,12 +790,14 @@ video {
   letter-spacing: -1px;
   line-height: 52px;
   text-transform: uppercase;
-  color: #ffffff;
+  color: #505464;
   border-right: 6px solid #eb3b5a;
   padding-right: 24px;
 }
 
-.codebound-title-2 {
+.jstorm-title-2, 
+.codebound-title-2,
+.mp-title-2 {
   font-family: "ralewayExtraBold", sans-serif;
   font-size: 64px;
   font-style: normal;
@@ -799,7 +822,7 @@ video {
 }
 
 .codebound-col:hover > .overlay-codebound {
-  background: rgba(80, 84, 100, .52);
+  background: rgba(80, 84, 100, .7);
   transition: all 350ms ease-in-out;
 }
 
@@ -815,7 +838,38 @@ video {
 }
 
 .jstorm-col:hover > .overlay-blue {
-  background: rgba(77, 141, 202, .6);
+  background: rgba(77, 141, 202, .7);
+  transition: all 350ms ease-in-out;
+}
+
+.overlay-white {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgb(255, 255, 255);
+  z-index: 1;
+  transition: all 350ms ease-in-out;
+}
+
+.overlay-mp {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: #000;
+  z-index: 1;
+}
+
+.mp-col:hover > .overlay-mp {
+  background: rgba(0, 0, 0, 0.7);
+  transition: all 350ms ease-in-out;
+}
+
+.appddiction-col:hover > .overlay-white {
+  background: rgba(255, 255, 255, 0.7);
   transition: all 350ms ease-in-out;
 }
 
@@ -824,6 +878,7 @@ video {
   width: 100%;
   color: #fff;
   overflow: hidden;
+  background-image: linear-gradient(to right, #fff, 50%, #fff, 50%, #505464);
   // border: 5px solid #f00;
 }
 
@@ -838,7 +893,7 @@ video {
 }
 
 .expansion-col + .expansion-col {
-  border-left: 1px solid #505464;
+  border-left: 2px solid #fff;
 }
 
 .expansion-col:first-child {

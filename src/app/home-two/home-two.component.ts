@@ -23,6 +23,7 @@ export class HomeTwoComponent implements OnInit {
 
   expandingCards() {
     $(".jstorm-col").on("mouseover", "div", function (e) {
+      $('.jstorm-site-logo').removeClass("fadeInUp");
       setTimeout(function () {
         $('.jstorm-title-2').addClass("fadeInUp");
         $('.jstorm-logo-img').addClass("fadeInUp");
@@ -30,6 +31,7 @@ export class HomeTwoComponent implements OnInit {
       }, 200);
     });
     $(".jstorm-col").on("mouseleave", "div", function (e) {
+      $('.jstorm-site-logo').addClass("fadeInUp");
       setTimeout(function () {
         $('.jstorm-title-2').removeClass("fadeInUp");
         $('.jstorm-logo-img').removeClass("fadeInUp");
@@ -38,21 +40,59 @@ export class HomeTwoComponent implements OnInit {
     });
 
     $(".codebound-col").on("mouseover", "div", function (e) {
+      $('.codebound-site-logo').removeClass("fadeInUp");
       setTimeout(function () {
         $('.codebound-title-2').addClass("fadeInUp");
-        // $('.jstorm-logo-img').addClass("fadeInUp");
+        $('.codebound-logo-img').addClass("fadeInUp");
         $('.codebound-text').addClass("fadeInUp");
       }, 200);
     });
     $(".codebound-col").on("mouseleave", "div", function (e) {
+      $('.codebound-site-logo').addClass("fadeInUp");
       setTimeout(function () {
         $('.codebound-title-2').removeClass("fadeInUp");
-        // $('.jstorm-logo-img').removeClass("fadeInUp");
+        $('.codebound-logo-img').removeClass("fadeInUp");
         $('.codebound-text').removeClass("fadeInUp");
       }, 200);
     });
 
-    
+    $(".mp-col").on("mouseover", "div", function (e) {
+      $('.mp-site-logo').removeClass("fadeInUp");
+      setTimeout(function () {
+        $('.mp-title-2').addClass("fadeInUp");
+        $('.mp-logo-img').addClass("fadeInUp");
+        $('.mp-text').addClass("fadeInUp");
+      }, 200);
+    });
+    $(".mp-col").on("mouseleave", "div", function (e) {
+      $('.mp-site-logo').addClass("fadeInUp");
+      setTimeout(function () {
+        $('.mp-title-2').removeClass("fadeInUp");
+        $('.mp-logo-img').removeClass("fadeInUp");
+        $('.mp-text').removeClass("fadeInUp");
+      }, 200);
+    });
+
+    $(".appddiction-col").on("mouseover", "div", function (e) {
+      $('.appddiction-site-logo').removeClass("fadeInUp");
+      setTimeout(function () {
+        $('.appddiction-title-2').addClass("fadeInUp");
+        $('.appddiction-logo-img').addClass("fadeInUp");
+        $('.appddiction-text').addClass("fadeInUp");
+
+      }, 200);
+    });
+    $(".appddiction-col").on("mouseleave", "div", function (e) {
+      $('.appddiction-site-logo').addClass("fadeInUp");
+      setTimeout(function () {
+        $('.appddiction-title-2').removeClass("fadeInUp");
+        $('.appddiction-logo-img').removeClass("fadeInUp");
+        $('.appddiction-text').removeClass("fadeInUp");
+
+      }, 200);
+    });
+
+
   }
 
 
@@ -68,16 +108,16 @@ export class HomeTwoComponent implements OnInit {
   }
 
   openSubNav() {
-    $('.sub-menu-container').addClass("expanded");
-    setTimeout(function () {
-      $('.projects-sub-nav-1').addClass("active-nav");
-      setTimeout(function () {
-        $('.projects-sub-nav-2').addClass("active-nav");
-        setTimeout(function () {
-          $('.projects-sub-nav-3').addClass("active-nav");
-        }, 150)
-      }, 150)
-    }, 250)
+    // $('.sub-menu-container').addClass("expanded");
+    // setTimeout(function () {
+    //   $('.projects-sub-nav-1').addClass("active-nav");
+    //   setTimeout(function () {
+    //     $('.projects-sub-nav-2').addClass("active-nav");
+    //     setTimeout(function () {
+    //       $('.projects-sub-nav-3').addClass("active-nav");
+    //     }, 150)
+    //   }, 150)
+    // }, 250)
   }
 
   viewSwitch(view) {
@@ -181,7 +221,7 @@ export class HomeTwoComponent implements OnInit {
     $('.nav-link-text').removeClass("color-black");
     $('.line').removeClass("line-black");
     $('.nav-circle').removeClass("circle-black");
-    $('.vertical-text-2').removeClass("color-black");
+    $('.vertical-text-2').addClass("color-black");
     $('.resume-circle').removeClass("active-circle-black");
     $('.resume-nav').removeClass("active-nav");
     $('.resume-circle').removeClass("nav-circle-black");
