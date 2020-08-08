@@ -887,7 +887,7 @@ video {
   overflow: hidden;
   flex-grow: 1;
   flex-basis: 0;
-  transition: flex-grow .3s;
+  transition: flex-grow 450ms;
 
   transform: skew(-20deg, 0);
 }
@@ -915,8 +915,8 @@ video {
 }
 
 .expansion-col:hover {
-  flex-grow: 3;
-  transition: flex-grow .3s;
+  flex-grow: 4;
+  transition: flex-grow 450ms;
 }
 
 .expansion-col h1 {
