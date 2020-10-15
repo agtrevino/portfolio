@@ -93,6 +93,14 @@ button:focus {
   outline: 0;
 }
 
+.desktop {
+  display: contents;
+}
+
+.mobile {
+  display: none !important;
+}
+
 .display-none {
   display: none;
 }
@@ -1330,6 +1338,10 @@ $black: #eb3b5a;
     opacity: 0.8;
   }
 
+  .mobile {
+    display: contents !important;
+  }
+
   .vertical-menu {
     z-index: 9999999999999;
     position: fixed;
@@ -1339,7 +1351,8 @@ $black: #eb3b5a;
   }
 
   .nav-line,
-  .nav-link-text {
+  .nav-link-text,
+  .desktop {
     display: none;
   }
 
