@@ -19,6 +19,11 @@ export class HomeTwoComponent implements OnInit {
     // this.viewSwitch();
     this.navViewCheck();
     this.resumeTitleViewCheck();
+    $(document).ready(function() {
+      $(".trigger").click(function() {
+        $(".menu").toggleClass("active"); 
+      });
+    });
   }
 
   expandingCards() {
