@@ -1466,11 +1466,24 @@ $black: #eb3b5a;
   left: 50%;
   transform: translateX(-50%) translateY(-50%);
 }
+
+.headshot-bg {
+  background-image: url("../../assets/img/agt/headshot-1.png") !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+}
+
 .menu {
   @extend .absolute-center;
-  width: 5em;
-  height: 5em;
+  width: 7em;
+  height: 7em;
   
+  .btn:hover {
+    background: rgba(235,59,89, 1);
+    transition: 420ms ease-in-out;
+  }
+
   .btn {
     position: absolute;
     top: 0;
@@ -1478,13 +1491,14 @@ $black: #eb3b5a;
     width: 100%;
     height: 100%;
     border-radius: 50%;
-    background: rgba(230,64,151, .50);
+    background: rgba(235,59,89, 0.76);
+    border: 4px solid #fff;
     opacity: 0;
     z-index: -10;
     cursor: pointer;
-    transition: opacity 1s, z-index 0.3s, transform 1s;
+    transition: opacity 1s, z-index 0.420s, transform 420ms;
     transform: translateX(0);
-    
+    transition: 420ms ease-in-out;
     .fa{
       @extend .absolute-center;
       font-size: 3em;
@@ -1582,7 +1596,7 @@ $numOfElems: 3;
   
   .menu.active {
     .rotater:nth-child(#{$i}) .btn-icon {
-      transform: translateY(-10em) rotate($deg/2 - $deg * ($i - 1));
+      transform: translateY(-14em) rotate($deg/2 - $deg * ($i - 1));
     }
   }
 }
