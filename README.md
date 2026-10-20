@@ -2,7 +2,11 @@
 
 Personal portfolio for Aaron G. Trevino. Built with [Astro](https://astro.build) and deployed to GitHub Pages.
 
+This is a port of the original Angular site. The design, copy, and animations are unchanged.
+
 ## Develop
+
+Requires Node.js 22 or later.
 
 ```sh
 npm install
@@ -11,11 +15,17 @@ npm run build    # outputs to dist/
 npm run preview
 ```
 
-## Update content
+## Where things live
 
-Edit `src/data/site.ts`. It holds the bio, experience, skills, projects, and contact links. Search for `TODO` to find items that need your input.
+| Path | What it holds |
+|---|---|
+| `src/components/home.html` | Page markup (all sections, copy, and links) |
+| `src/styles/home.scss` | Styles from the original component |
+| `src/scripts/home.js` | Scroll, nav, and hover behavior (jQuery) |
+| `src/pages/index.astro` | Page shell that loads the files above |
+| `public/assets/` | Fonts, images, videos, and the resume PDF |
 
-To add a resume, place the PDF in a new `public/` folder (for example `public/resume.pdf`) and set `resumeUrl: '/resume.pdf'` in `src/data/site.ts`.
+In `home.html`, `%BASE%` is replaced with the site's base path at build time. Keep it in asset URLs.
 
 ## Deploy
 
