@@ -1,0 +1,31 @@
+---
+import 'bootstrap/dist/css/bootstrap.min.css';
+import '../styles/global.css';
+import '../styles/home.scss';
+import raw from '../components/home.html?raw';
+
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const html = raw.replaceAll('%BASE%', base);
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Aaron G. Trevino | Portfolio</title>
+    <meta
+      name="description"
+      content="Portfolio of Aaron G. Trevino, full-stack developer and designer."
+    />
+    <link rel="icon" type="image/x-icon" href={`${base}/favicon.ico`} />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap" rel="stylesheet" />
+  </head>
+  <body style="background:#505464;">
+    <Fragment set:html={html} />
+    <script>
+      import '../scripts/home.js';
+    </script>
+  </body>
+</html>

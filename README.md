@@ -1,27 +1,37 @@
 # Portfolio
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.2.1.
+Personal portfolio for Aaron G. Trevino. Built with [Astro](https://astro.build) and deployed to GitHub Pages.
 
-## Development server
+This is a port of the original Angular site. The design, copy, and animations are unchanged.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Develop
 
-## Code scaffolding
+Requires Node.js 22 or later.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+```sh
+npm install
+npm run dev      # http://localhost:4321/portfolio/
+npm run build    # outputs to dist/
+npm run preview
+```
 
-## Build
+## Where things live
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+| Path | What it holds |
+|---|---|
+| `src/components/home.html` | Page markup (all sections, copy, and links) |
+| `src/styles/home.scss` | Styles from the original component |
+| `src/scripts/home.js` | Scroll, nav, and hover behavior (jQuery) |
+| `src/pages/index.astro` | Page shell that loads the files above |
+| `public/assets/` | Fonts, images, videos, and the resume PDF |
 
-## Running unit tests
+In `home.html`, `%BASE%` is replaced with the site's base path at build time. Keep it in asset URLs.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Deploy
 
-## Running end-to-end tests
+The workflow in `.github/workflows/deploy.yml` builds and deploys on every push to `master`.
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+1. In the repository, go to **Settings** > **Pages**.
+2. Under **Build and deployment**, set **Source** to **GitHub Actions**.
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+The default base path is `/portfolio`. For a custom domain or a `<user>.github.io` repository, set the `SITE` and `BASE` environment variables in the workflow.
