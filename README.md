@@ -1,27 +1,27 @@
 # Portfolio
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.2.1.
+Personal portfolio for Aaron G. Trevino. Built with [Astro](https://astro.build) and deployed to GitHub Pages.
 
-## Development server
+## Develop
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+```sh
+npm install
+npm run dev      # http://localhost:4321/portfolio/
+npm run build    # outputs to dist/
+npm run preview
+```
 
-## Code scaffolding
+## Update content
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Edit `src/data/site.ts`. It holds the bio, experience, skills, projects, and contact links. Search for `TODO` to find items that need your input.
 
-## Build
+To add a resume, place the PDF in a new `public/` folder (for example `public/resume.pdf`) and set `resumeUrl: '/resume.pdf'` in `src/data/site.ts`.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+## Deploy
 
-## Running unit tests
+The workflow in `.github/workflows/deploy.yml` builds and deploys on every push to `master`.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+1. In the repository, go to **Settings** > **Pages**.
+2. Under **Build and deployment**, set **Source** to **GitHub Actions**.
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+The default base path is `/portfolio`. For a custom domain or a `<user>.github.io` repository, set the `SITE` and `BASE` environment variables in the workflow.
