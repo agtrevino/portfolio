@@ -1,77 +1,77 @@
 
 @font-face {
   font-family: "dense";
-  src: url("/assets/fonts/Dense-Regular.otf");
+  src: url("../assets/fonts/Dense-Regular.otf");
 }
 
 @font-face {
   font-family: "ralewayLight";
-  src: url("/assets/fonts/Raleway-Light.ttf");
+  src: url("../assets/fonts/Raleway-Light.ttf");
 }
 
 @font-face {
   font-family: "ralewayExtraLight";
-  src: url("/assets/fonts/Raleway-ExtraLight.ttf");
+  src: url("../assets/fonts/Raleway-ExtraLight.ttf");
 }
 
 @font-face {
   font-family: "ralewayThin";
-  src: url("/assets/fonts/Raleway-Thin.ttf");
+  src: url("../assets/fonts/Raleway-Thin.ttf");
 }
 
 @font-face {
   font-family: "raleway";
-  src: url("/assets/fonts/Raleway-Regular.ttf");
+  src: url("../assets/fonts/Raleway-Regular.ttf");
 }
 
 @font-face {
   font-family: "ralewaySemi";
-  src: url("/assets/fonts/Raleway-SemiBold.ttf");
+  src: url("../assets/fonts/Raleway-SemiBold.ttf");
 }
 
 @font-face {
   font-family: "ralewayBold";
-  src: url("/assets/fonts/Raleway-Bold.ttf");
+  src: url("../assets/fonts/Raleway-Bold.ttf");
 }
 
 @font-face {
   font-family: "ralewayExtraBold";
-  src: url("/assets/fonts/Raleway-ExtraBold.ttf");
+  src: url("../assets/fonts/Raleway-ExtraBold.ttf");
 }
 
 @font-face {
   font-family: "ralewayBlack";
-  src: url("/assets/fonts/Raleway-Black.ttf");
+  src: url("../assets/fonts/Raleway-Black.ttf");
 }
 
 @font-face {
   font-family: "ralewayExtraLightItalics";
-  src: url("/assets/fonts/Raleway-ExtraLightItalic.ttf");
+  src: url("../assets/fonts/Raleway-ExtraLightItalic.ttf");
 }
 
 @font-face {
   font-family: "big";
-  src: url("/assets/fonts/BIGJOHN.otf");
+  src: url("../assets/fonts/BIGJOHN.otf");
 }
 
 @font-face {
   font-family: "slim";
-  src: url("/assets/fonts/SlimJoe.otf");
+  src: url("../assets/fonts/SlimJoe.otf");
 }
 
 @font-face {
   font-family: "avenirRegular";
-  src: url("/assets/fonts/AvenirLTStd-Book.woff");
+  src: url("../assets/fonts/AvenirLTStd-Book.woff");
 }
 
 @font-face {
   font-family: "avenirLight";
-  src: url("/assets/fonts/AvenirLTStd-LightCopy.woff");
+  src: url("../assets/fonts/AvenirLTStd-LightCopy.woff");
 }
 
 @font-face {
   font-family: "trumpGothicEast";
-  src: url("/assets/fonts/trump_gothic_east_bold.ttf");
+  src: url("../assets/fonts/trump_gothic_east_bold.ttf");
 }
 
 * {
@@ -272,7 +272,7 @@ button:focus {
 
 .bg1::after {
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
-    url("/assets/img/background/graffiti-4.jpg");
+    url("../assets/img/background/graffiti-4.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -281,7 +281,7 @@ button:focus {
 
 .bg2::after {
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0.42), rgba(0, 0, 0, 0.42)),
-    url("/assets/img/background/graffiti-2.jpg");
+    url("../assets/img/background/graffiti-2.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -289,7 +289,7 @@ button:focus {
 
 .bg3::after {
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
-    url("/assets/img/background/DesignDevelop.png");
+    url("../assets/img/background/DesignDevelop.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -297,7 +297,7 @@ button:focus {
 
 .resume-two-container {
   background-image: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 1)),
-    url("/assets/img/background/DesignDevelopInvert.png");
+    url("../assets/img/background/DesignDevelopInvert.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1449,7 +1449,7 @@ $black: #eb3b5a;
 }
 
 .headshot-bg {
-  background-image: url("/assets/img/agt/headshot-1.png") !important;
+  background-image: url("../assets/img/agt/headshot-1.png") !important;
   background-position: center !important;
   background-repeat: no-repeat !important;
   background-size: cover !important;

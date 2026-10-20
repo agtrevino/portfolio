@@ -2,7 +2,41 @@ import $ from 'jquery';
 
 const BASE = (import.meta.env.BASE_URL || '/').replace(/\/$/, '');
 
+
+// Run scroll handlers at most once per animation frame.
+function onWrapperScroll(fn) {
+  let ticking = false;
+  $('.wrapper').on('scroll', function () {
+    if (ticking) return;
+    ticking = true;
+    requestAnimationFrame(() => {
+      ticking = false;
+      fn.call(this);
+    });
+  });
+}
+
+// Project videos sit under overlays until a panel is hovered.
+// Play a video only while its panel is hovered (or visible on touch screens).
+function videoPlayback() {
+  const canHover = window.matchMedia('(hover: hover)').matches;
+  document.querySelectorAll('.expansion-col').forEach((col) => {
+    const video = col.querySelector('video');
+    if (!video) return;
+    const play = () => { const p = video.play(); if (p && p.catch) p.catch(() => {}); };
+    if (canHover) {
+      col.addEventListener('mouseenter', play);
+      col.addEventListener('mouseleave', () => video.pause());
+    } else if ('IntersectionObserver' in window) {
+      new IntersectionObserver((entries) => {
+        entries.forEach((e) => (e.isIntersecting ? play() : video.pause()));
+      }, { threshold: 0.25 }).observe(col);
+    }
+  });
+}
+
 function ngOnInit() {
+    videoPlayback();
     expandingCards();
     navAnim();
     // this.viewSwitch();
@@ -262,7 +296,7 @@ function isContactView() {
 function navViewCheck() {
 
     
-    $('.wrapper').scroll(function () {
+    onWrapperScroll(function () {
       var scrollTop = $(window).scrollTop();
       var windowHeight = $(window).height();
 
@@ -356,7 +390,7 @@ function navViewCheck() {
   }
 
 function resumeTitleViewCheck() {
-    $('.wrapper').scroll(function () {
+    onWrapperScroll(function () {
       var scrollTop = $(window).scrollTop();
       var windowHeight = $(window).height();
       $(".creative-title").each(function () {
